@@ -14,3 +14,7 @@ $media-list: (
     'md': 960,
     'lg': 1200,
 );
+
+/*Цвета*/
+$c-gradient-blue: linear-gradient(180deg, #0C6BCC 0%, #004E9E 100%);
+$c-gradient-blue-reverse: linear-gradient(0deg, #0C6BCC 0%, #004E9E 100%);

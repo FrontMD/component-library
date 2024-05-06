@@ -242,3 +242,38 @@ html {
 .d-n-i {
 	display: none !important;
 }
+
+/*Страница со списком страниц*/
+.components-page {
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-gap: 20px;
+        margin-top: 60px;
+        @include max(1024) {
+            grid-gap: 15px;
+            margin-top: 40px; 
+        }
+        @include max(768) {
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+            margin-top: 40px; 
+        }
+    }
+
+    &__link {
+        font-size: 32px;
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s linear;
+        @include max(1024) {
+            font-size: 20px; 
+        }
+        @include max(768) {
+            font-size: 20px; 
+        }
+        @include hover() {
+            color: blue;
+        }
+    }
+}

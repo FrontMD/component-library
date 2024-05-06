@@ -8,6 +8,15 @@
     }
 }
 
+@mixin hover {
+	@media (hover: hover) {
+		&:hover,
+		&:active {
+			@content;
+		}
+	}
+}
+
 @mixin relative_img(){
     position: absolute;
     left: 0;

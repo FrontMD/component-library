@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Заголовки</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <main class="site-main">
+      <section class="form-page">
+        <div class="container form-page__container">
+          <form class="form" action="#" data-validate="data-validate" novalidate="novalidate">
+            <div class="form__title">Заголовок формы</div>
+            <div class="form__text"></div>
+            <div class="form__fields">
+              <label class="field  " data-js="formField"><span class="field__title">Ф.И.О.<span>*</span></span>
+                <input class="field__input" type="text" placeholder="" required=""/><span class="field__error" data-js="fieldError"></span>
+              </label>
+              <label class="field  " data-js="formField"><span class="field__title">Телефон<span>*</span></span>
+                <input class="field__input" type="tel" placeholder="+7" data-type="phoneNumber" required="" data-v-name="phone"/><span class="field__error" data-js="fieldError"></span>
+              </label>
+              <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
+                <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"/><span class="field__error" data-js="fieldError"></span>
+              </label>
+              <label class="field  " data-js="formField"><span class="field__title">Дата рождения<span>*</span></span>
+                <input class="field__input" type="text" placeholder="-- -- ----" data-type="date" required="" data-v-name="date"/><span class="field__error" data-js="fieldError"></span>
+              </label>
+              <label class="field  " data-js="formField"><span class="field__title">Образование</span>
+                <select class="field__select" data-js="formSelect">
+                  <option></option>
+                  <option>Высшее</option>
+                  <option>Средне-специальное</option>
+                  <option>Среднее</option>
+                </select>
+              </label>
+              <label class="field  " data-js="textarea"><span class="field__title">Коментарий</span>
+                <textarea class="field__textarea" rows="3"></textarea>
+              </label>
+              <label class="field-file" data-js="formField" data-placeholder="Запрос на изготовление продукции"><span class="field-file__title">Прикрепить файл<span>*</span></span><span class="field-file__fakeinput"><span data-js="fileName">Запрос на изготовление продукции</span><span class="icon-empty">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                    </svg></span><span class="icon-full" data-js="iconFull">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#close"></use>
+                    </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                <input class="field-file__input" type="file" required="" data-v-name="file"/>
+              </label>
+            </div>
+            <button class="btn btn--btn btn--blue form__submit" type="submit"><span class="btn__text">Отправить</span>
+            </button>
+            <div class="form__privacy">
+              <p>Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <noindex>
+      <div style="display:none;">
+        <!--код модалок сюда-->
+      </div>
+    </noindex>
+    <script src="js/main.js"></script>
+  </body>
+</html>

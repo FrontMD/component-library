@@ -1,0 +1,70 @@
+.title {
+    h1, h2, h3, h4 {
+        color: inherit;
+        line-height: inherit;
+        font-size: inherit;
+        letter-spacing: inherit;
+        font-weight: inherit;
+        text-wrap: inherit;
+    } 
+    &--h1 {
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1.4em;
+        text-transform: uppercase;
+        color: black;
+
+        @include max(1024) {
+            font-size: 44px;
+        }
+        @include max(768) {
+            font-size: 22px;
+        }
+    }
+
+    &--h2 {
+        font-size: 54px;
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        color: black;
+
+        @include max(1024) {
+            font-size: 40px;
+        }
+        @include max(768) {
+            font-size: 20px;
+        }
+    } 
+
+    &--h3 {
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        color: black;
+
+        @include max(1024) {
+            font-size: 34px;
+        }
+        @include max(768) {
+            font-size: 18px;
+        }
+    } 
+
+    &--h4 {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        color: black;
+
+        @include max(1024) {
+            font-size: 24px;
+        }
+        @include max(768) {
+            font-size: 16px;
+        }
+    } 
+
+}

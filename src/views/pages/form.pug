@@ -1,0 +1,86 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Заголовки"
+
+block content
+	+mixins()
+	section.form-page
+		.container.form-page__container
+			+form({
+				classes: '',
+				title: 'Заголовок формы',
+				btnText: 'Отправить'
+			})
+				+field({
+					classes: '',
+					type: 'text',
+					title: 'Ф.И.О.',
+					placeholder: '',
+					inputAttr: {
+						'required': ''
+					},
+					resetBtn: false,
+					isRequired: true
+				})
+				+field({
+					classes: '',
+					type: 'tel',
+					title: 'Телефон',
+					placeholder: '+7',
+					inputAttr: {
+						'data-type': 'phoneNumber',
+						'required': '',
+						'data-v-name': 'phone'
+					},
+					resetBtn: false,
+					isRequired: true
+				})
+				+field({
+					classes: '',
+					type: 'email',
+					title: 'Email',
+					placeholder: 'Email',
+					inputAttr: {
+						'required': '',
+						'data-v-name': 'email'
+					},
+					resetBtn: false,
+					isRequired: true
+				}) 
+				+field({
+					classes: '',
+					type: 'text',
+					title: 'Дата рождения',
+					placeholder: '-- -- ----',
+					inputAttr:  {
+						'data-type': 'date',
+						'required': '',
+						'data-v-name': 'date'
+					},
+					resetBtn: false,
+					isRequired: true
+				})  
+				+field({
+					classes: '',
+					tag: 'select',
+					title: 'Образование',
+				})  
+				+field({
+					classes: '',
+					tag: 'textarea',
+					title: 'Коментарий',
+				})
+				+field-file({
+					classes: '',
+					type: 'file',
+					title: 'Прикрепить файл',
+					placeholder: 'Запрос на изготовление продукции',
+					inputAttr: {
+						'required': '',
+						'data-v-name': 'file'
+					},
+					resetBtn: false,
+					isRequired: true
+				})

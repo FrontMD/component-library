@@ -1,0 +1,30 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Заголовки"
+
+block content
+	+mixins()
+	section.titles
+		.container.titles__container
+			+title({
+				classes: '',
+				tag: 'h1',
+				text: 'Заголовок первого уровня'
+			})
+			+title({
+				classes: '',
+				tag: 'h2',
+				text: 'Заголовок второго уровня'
+			})
+			+title({
+				classes: '',
+				tag: 'h3',
+				text: 'Заголовок третьего уровня'
+			})
+			+title({
+				classes: '',
+				tag: 'h4',
+				text: 'Заголовок четвёртого уровня'
+			})

@@ -2,6 +2,18 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "Главная"
+	- const title = "Компоненты"
 
 block content
+	+mixins()
+	.page.components-page
+		section.components-list
+			.container
+				+title({
+					classes: 'components-page__title',
+					tag: 'h1',
+					text: 'Компоненты'
+				})
+				.components-page__links
+					a.components-page__link(href="titles.html") Заголовки
+					a.components-page__link(href="form.html") Форма

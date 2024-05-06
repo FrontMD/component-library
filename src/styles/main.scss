@@ -15,5 +15,9 @@
 
 // БЭМ-блоки
 @import "../blocks/modules/modules";
+
+// БЭМ-компоненты
+@import "../blocks/components/components";
+
 //главная
-@import "base/front-page";
+@import "base/site-styles";
