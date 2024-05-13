@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Заголовки"
+	- const title = "Формы и поля"
 
 block content
 	+mixins()
@@ -84,3 +84,4 @@ block content
 					resetBtn: false,
 					isRequired: true
 				})
+	include ../../blocks/components/thanks-message/thanks-message			

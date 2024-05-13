@@ -1,0 +1,36 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Хлебные крошки"
+
+block content
+	+mixins()
+	section.breadcrumbs-page
+		.container.breadcrumbs-page__container
+
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Классические'
+				})
+				+breadcrumbs()
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Только конопка "назад"'
+				})
+				+breadcrumbs({
+					items: []
+				})
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'С кнопкой назад'
+				})
+				+breadcrumbs({
+					classes: 'breadcrumbs--back'
+				})

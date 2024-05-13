@@ -1,9 +1,9 @@
 .btn {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     gap: 35px;
-    padding: 13px 26px;
+    padding: 6px 26px;
     width: fit-content;
     min-width: 240px;
     min-height: 50px;
@@ -126,9 +126,14 @@
 .btn.btn--link {
     border: none;
     padding: 0;
+    min-width: fit-content;
+    flex-direction: row-reverse;
+    gap: 20px;
+    color: black;
     @include hover(){
         background-color:transparent;
-        .btn__text {
+        .btn__text,
+        .btn__icon {
             color: blue; 
         }
     }
@@ -157,6 +162,7 @@
     }
 }
 
-.btn.btn--fight {
+.btn.btn--revers {
     flex-direction: row-reverse;
+    justify-content: space-between;
 }

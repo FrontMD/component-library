@@ -3,6 +3,17 @@
     padding-bottom: 200px;
 }
 
+.component-preview {
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
 .titles {
     &__container {
         display: flex;
@@ -20,4 +31,17 @@
         max-width: 420px;
     }
 
+}
+
+.breadcrumbs-page,
+.buttons-page {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+.buttons-page {
+    background-color: linen;
 }

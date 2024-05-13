@@ -1,0 +1,94 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Кнопки"
+
+block content
+	+mixins()
+	section.buttons-page
+		.container.buttons-page__container
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Обычные кнопки'
+				})
+				.component-preview__flex
+					+btn({
+						cMode: 'transparent'
+					})
+					+btn({
+						cMode: 'blue'
+					})
+					+btn({
+						cMode: 'white'
+					})
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Кнопки с иконками'
+				})
+				.component-preview__flex
+					+btn({
+						classes: 'btn--revers',
+						cMode: 'transparent',
+						icon: true,
+						iconName: 'card_arrow'
+					})
+					+btn({
+						classes: 'btn--revers',
+						cMode: 'blue',
+						icon: true,
+						iconName: 'link_arrow_slanted'
+					})
+					+btn({
+						classes: 'btn--revers',
+						cMode: 'white',
+						icon: true,
+						iconName: 'link_arrow'
+					})
+					+btn({
+						cMode: 'transparent',
+						icon: true,
+						iconName: 'uslugi_btn',
+					})
+
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Текстовые кнопки'
+				})
+				.component-preview__flex
+					+btn({
+						vMode: "link",
+					})
+					+btn({
+						classes: 'btn--revers',
+						vMode: 'link',
+						icon: true,
+						iconName: 'link_arrow'
+					})
+
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Кнопки-иконки'
+				})
+				.component-preview__flex
+					+btn({
+						vMode: 'icon',
+						cMode: 'transparent',
+						icon: true,
+						iconName: 'card_arrow'
+					})
+					+btn({
+						vMode: 'icon',
+						cMode: 'white',
+						icon: true,
+						iconName: 'link_arrow'
+					})
+

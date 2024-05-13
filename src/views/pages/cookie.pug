@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Куки"
+
+block content
+	+mixins()
+
+	include ../../blocks/components/cookie/cookie

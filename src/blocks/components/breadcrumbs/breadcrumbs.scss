@@ -1,0 +1,135 @@
+.breadcrumbs {
+    position: relative;
+    z-index: 30;
+    margin-bottom: 21px;
+    @include max(1024) {
+        margin-bottom: 21px;
+    }
+    @include max(768) {
+        margin-bottom: 19px;
+    }
+    &__list {
+        list-style-type: none;
+        display: flex;
+        gap: 5px;
+        font-size: 15px;
+        line-height: 1.17;
+        font-weight: 500;
+        color: black;
+        @include max(1024) {
+            gap: 5px;
+            font-size: 15px;
+        }
+        @include max(768) {
+            display: none;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        @include max(1024) {
+            gap: 5px;
+        }
+        a {
+            transition: 0.3s;
+            cursor: pointer;
+            color: inherit;
+            text-decoration: none;
+        }
+        @include hover() {
+            a {
+                color: blue;
+            }
+        }
+    }
+    &__item--current {
+        color: #AFB2B8;
+        pointer-events: none;
+    }
+    &__separator {
+        color: #AFB2B8; 
+    }
+    &__back {
+        display: none;
+        @include max(768) {
+            display: flex;
+            min-height: auto;
+            min-width: auto;
+            gap: 15px;
+            margin-top: 0;
+            .btn__text {
+                color: black;
+            }
+            .btn__icon {
+                width: 8px;
+                height: 13px;
+                svg {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+}
+
+.breadcrumbs.breadcrumbs--back,
+.breadcrumbs.breadcrumbs--no-links {
+    .breadcrumbs__back {
+        display: flex;
+        min-height: auto;
+        min-width: auto;
+        margin-top: 40px;
+        gap: 15px;
+        @include hover() {
+            .btn__text {
+                color: blue;
+            }
+            .btn__icon {
+                svg {
+                    color: blue;
+                }
+            }
+        }
+        .btn__text {
+            color: black;
+            font-size: 18px;
+            transition: color 0.3s linear;
+        }
+        .btn__icon {
+            width: 10px;
+            height: 15px;
+            svg {
+                transform: rotate(-180deg);
+            }
+        }
+        @include max(1024) {
+            margin-top: 30px;
+            gap: 15px;
+            .btn__text {
+                font-size: 18px;
+            }
+            .btn__icon {
+                width: 8px;
+                height: 13px;
+            }
+        }
+        @include max(768) {
+            display: flex;
+            min-height: auto;
+            min-width: auto;
+            gap: 15px;
+            margin-top: 5px;
+            .btn__text {
+                color: black;
+                font-size: 16px;
+            }
+            .btn__icon {
+                width: 8px;
+                height: 13px;
+                svg {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+}

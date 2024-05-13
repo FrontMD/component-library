@@ -1,0 +1,48 @@
+-
+	const defaultBreadCrumbsProps = {
+		classes: '',
+		colorMode: 'dark',
+		items: [
+			{
+				name: 'Главная',
+				link: 'javascript:void(0);'
+			},
+			{
+				name: 'Хлебные крошки',
+				link: 'javascript:void(0);'
+			}
+		],
+		deskBackBtn: false
+	}
+
+mixin breadcrumbs(props = defaultBreadCrumbsProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultBreadCrumbsProps.classes,
+			colorMode: props.colorMode ? props.colorMode : defaultBreadCrumbsProps.colorMode,
+			items: props.items ? props.items : defaultBreadCrumbsProps.items,
+			deskBackBtn: props.deskBackBtn ? props.deskBackBtn : defaultBreadCrumbsProps.deskBackBtn,
+		}
+
+		let colorModeClass = 'breadcrumbs--' + checkProps.colorMode
+		let deskBackBtnClass = checkProps.deskBackBtn ? 'breadcrumbs--back' : ''
+		let noLinksClass = checkProps.items.length < 1 ? 'breadcrumbs--no-links' : ''
+
+	.breadcrumbs(class=checkProps.classes + ' ' + colorModeClass + ' ' + deskBackBtnClass + ' ' + noLinksClass)
+		-if(checkProps.items.length > 0)
+			ul.breadcrumbs__list
+				each val, index in checkProps.items
+					li.breadcrumbs__item(class= (index === checkProps.items.length - 1) ? "breadcrumbs__item--current" : "")
+						if index === checkProps.items.length - 1
+							span= val.name
+						else
+							a(href=`${val.link}`)= val.name
+							span.breadcrumbs__separator /
+		+btn({
+			classes: 'breadcrumbs__back',
+			vMode: 'link',
+			text: 'Назад',
+			cMode: 'transparent',
+			icon: true,
+			iconName: 'card_arrow',
+		})
