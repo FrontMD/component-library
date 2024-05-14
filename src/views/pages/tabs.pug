@@ -1,0 +1,22 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Вкладки"
+
+block content
+	+mixins()
+	section.tabs-page
+		.container.tabs-page__container
+			+tabs-block()
+				.swiper-slide.slides__slide
+					+text-editor()
+						h2 Содержимое вкладки 1
+
+				.swiper-slide.slides__slide
+					+text-editor()
+						h2 Содержимое вкладки 2
+
+				.swiper-slide.slides__slide
+					+text-editor()
+						h2 Содержимое вкладки 3

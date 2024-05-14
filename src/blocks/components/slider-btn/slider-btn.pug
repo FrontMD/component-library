@@ -1,0 +1,18 @@
+-
+    const defaultSliderBtnProps = {
+        classes: '',
+        direction: 'prev',
+    }
+
+mixin slider-btn(props = defaultSliderBtnProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSliderBtnProps.classes,
+            direction: props.direction ? props.direction : defaultSliderBtnProps.direction,
+        }
+
+        let modeClass = 'slider-btn--' + checkProps.direction
+
+    button.slider-btn(type=checkProps.buttonType class=modeClass + ' ' + checkProps.classes data-js=`${checkProps.direction === "prev" ? 'sliderBtnPrev' : 'sliderBtnNext'}`)&attributes(attributes)
+        svg 
+            use(xlink:href=`img/sprites/sprite.svg#slider_arrow`)

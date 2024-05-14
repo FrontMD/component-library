@@ -6,25 +6,27 @@
 @@include("../../blocks/components/field-file/field-file.js")
 @@include("../../blocks/components/select/select.js")
 @@include("../../blocks/components/cookie/cookie.js")
+@@include("../../blocks/components/up-btn/up-btn.js")
+@@include("../../blocks/components/amount-input/amount-input.js")
+@@include("../../blocks/components/tabs-block/tabs-block.js")
+@@include("../../blocks/components/spoiler/spoiler.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     validation();
     fileFieldInit();
     selectInit();
     cookieInit();
+    upBtnInit();
+    amountInput();
+    tabsBlockInit();
+    accordeonInit();
 })
 
 /*include("../../blocks/components/modal/modal.js")
-include("../../blocks/components/spoiler/spoiler.js")
-include("../../blocks/components/tabs-block/tabs-block.js")
 include("../../blocks/components/image-slider/image-slider.js")
-include("../../blocks/components/up-btn/up-btn.js")
 
 document.addEventListener('DOMContentLoaded', () => {
-    accordeonInit();
-    tabsBlockInit();
     imageSlidersInit();
-    upBtnInit();
     
     //modals
     modal('orderService');

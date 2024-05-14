@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Спойлеры</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+    <main class="site-main">
+      <section class="spoilers-page">
+        <div class="container spoilers-page__container" data-js="accordion">
+          <div class="spoiler   spoiler--rotate  " data-js="spoiler">
+            <div class="spoiler__header" data-js="spoilerHeader">
+              <div class="spoiler__title">Спойлер со стрелкой</div>
+              <div class="spoiler__arrow">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="spoiler__content" data-js="spoilerContent">
+              <div class="spoiler__wrapper">
+                <div class="text-editor">
+                  <h3>Контент спойлера</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoiler   spoiler--replace  " data-js="spoiler">
+            <div class="spoiler__header" data-js="spoilerHeader">
+              <div class="spoiler__title">Спойлер с подменой иконки</div>
+              <div class="spoiler__arrow">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="spoiler__content" data-js="spoilerContent">
+              <div class="spoiler__wrapper">
+                <div class="text-editor">
+                  <h3>Контент спойлера</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoiler   spoiler--rotate spoiler--empty " data-js="spoiler">
+            <div class="spoiler__header" data-js="spoilerHeader">
+              <div class="spoiler__title">Пустой спойлер</div>
+            </div>
+            <div class="spoiler__content" data-js="spoilerContent">
+              <div class="spoiler__wrapper">
+              </div>
+            </div>
+          </div>
+          <div class="spoiler  spoiler--image spoiler--rotate  " data-js="spoiler">
+            <div class="spoiler__header" data-js="spoilerHeader">
+              <div class="spoiler__img"> <img src="../../img/gallery/gallery_1.jpg" alt="Спойлер с картинкой"/></div>
+              <div class="spoiler__title">Спойлер с картинкой</div>
+              <div class="spoiler__arrow">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="spoiler__content" data-js="spoilerContent">
+              <div class="spoiler__wrapper">
+                <div class="text-editor">
+                  <h3>Контент спойлера</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spoiler   spoiler--replace  " data-js="spoiler">
+            <div class="spoiler__header" data-js="spoilerHeader">
+              <div class="spoiler__title">Вложенные спойлеры</div>
+              <div class="spoiler__arrow">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
+                </svg>
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="spoiler__content" data-js="spoilerContent">
+              <div class="spoiler__wrapper">
+                <div class="inner-spoilers">
+                  <div class="spoiler inner-spoilers__content  spoiler--replace  " data-js="spoiler">
+                    <div class="spoiler__header" data-js="spoilerHeader">
+                      <div class="spoiler__title">Вложенные спойлеры</div>
+                      <div class="spoiler__arrow">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="spoiler__content" data-js="spoilerContent">
+                      <div class="spoiler__wrapper">
+                        <div class="text-editor">
+                          <h3>Контент спойлера					</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spoiler inner-spoilers__content  spoiler--replace  " data-js="spoiler">
+                    <div class="spoiler__header" data-js="spoilerHeader">
+                      <div class="spoiler__title">Вложенные спойлеры</div>
+                      <div class="spoiler__arrow">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
+                        </svg>
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="spoiler__content" data-js="spoilerContent">
+                      <div class="spoiler__wrapper">
+                        <div class="text-editor">
+                          <h3>Контент спойлера</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-editor">
+            <h2>Спойлер "Показать ещё"</h2>
+            <p>Повседневная практика показывает, что внедрение современных методик предполагает независимые способы реализации модели развития. А ещё тщательные исследования конкурентов, превозмогая сложившуюся непростую экономическую ситуацию, своевременно верифицированы. Каждый из нас понимает очевидную вещь: высококачественный прототип будущего проекта, в своём классическом представлении, допускает внедрение модели развития. Как принято считать, активно развивающиеся страны третьего мира и по сей день остаются уделом либералов, которые жаждут быть объединены в целые кластеры себе подобных. Но глубокий уровень погружения выявляет срочную потребность поэтапного и последовательного развития общества. Задача организации, в особенности же высококачественный прототип будущего проекта говорит о возможностях распределения внутренних резервов и ресурсов.</p>
+            <div class="spoiler projects__more  spoiler--rotate  spoiler--show-more" data-js="spoiler">
+              <div class="spoiler__content" data-js="spoilerContent">
+                <div class="spoiler__wrapper">
+                  <div class="text-editor">
+                    <p>Следует отметить, что синтетическое тестирование обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Сложно сказать, почему интерактивные прототипы преданы социально-демократической анафеме. В рамках спецификации современных стандартов, предприниматели в сети интернет лишь добавляют фракционных разногласий и смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Наше дело не так однозначно, как может показаться: высокое качество позиционных исследований в значительной степени обусловливает важность форм воздействия. Как принято считать, действия представителей оппозиции заблокированы в рамках своих собственных рациональных ограничений. Господа, современная методология разработки играет определяющее значение для новых принципов формирования материально-технической и кадровой базы.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="spoiler__header" data-js="spoilerHeader">
+                <button class="btn btn--btn btn--transparent spoiler__btn" type="button"><span class="btn__icon"> 
+                    <svg> 
+                      <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                    </svg></span><span class="btn__text">Подробнее</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <noindex>
+      <div style="display:none;">
+        <!--код модалок сюда-->
+      </div>
+    </noindex>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

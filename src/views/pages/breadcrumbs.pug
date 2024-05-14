@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Хлебные крошки"
+	- const title = "Хлебные крошки и пагинация"
 
 block content
 	+mixins()
@@ -34,3 +34,10 @@ block content
 				+breadcrumbs({
 					classes: 'breadcrumbs--back'
 				})
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Пагинация'
+				})
+				+pagination()

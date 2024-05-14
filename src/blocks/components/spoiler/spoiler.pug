@@ -1,0 +1,57 @@
+
+-
+    const defaultSpoilerProps = {
+        classes: '',
+        title: '',
+        iconName: '',
+        icon2Name: '',
+        iconRotate: false,
+        image: false,
+        imagePath: '',
+        inclusion: false,
+        isEmpty: false,
+        isShowMore: false
+    }
+
+mixin spoiler(props = defaultSpoilerProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSpoilerProps.classes,
+            title: props.title ? props.title : defaultSpoilerProps.title,
+            iconName: props.iconName ? props.iconName : defaultSpoilerProps.iconName,
+            icon2Name: props.icon2Name ? props.icon2Name : defaultSpoilerProps.icon2Name,
+            iconRotate: props.iconRotate ? props.iconRotate : defaultSpoilerProps.iconRotate,
+            image: props.image ? props.image : defaultSpoilerProps.image,
+            imagePath: props.imagePath ? props.imagePath : defaultSpoilerProps.imagePath,
+            isEmpty: props.isEmpty ? props.isEmpty : defaultSpoilerProps.isEmpty,
+            isShowMore: props.isShowMore ? props.isShowMore : defaultSpoilerProps.isShowMore,
+        }
+
+    .spoiler(class= `${checkProps.classes} ${checkProps.image ? 'spoiler--image' : ''} ${checkProps.iconRotate ? 'spoiler--rotate' : 'spoiler--replace'} ${checkProps.isEmpty ? 'spoiler--empty' : ''} ${checkProps.isShowMore ? 'spoiler--show-more' : ''}` data-js="spoiler")
+        -if(!(checkProps.isShowMore))
+            .spoiler__header(data-js="spoilerHeader")
+                if(checkProps.image)
+                    .spoiler__img 
+                        img(src=checkProps.imagePath alt= checkProps.title)
+                .spoiler__title!= checkProps.title
+                if(checkProps.isEmpty === false)
+                    .spoiler__arrow
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#${checkProps.iconName}`)
+                        if(checkProps.icon2Name.length > 0)
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon2Name}`)
+        .spoiler__content(data-js="spoilerContent")
+            .spoiler__wrapper
+                block
+        -if(checkProps.isShowMore)
+            .spoiler__header(data-js="spoilerHeader")
+                +btn({
+                    classes: 'spoiler__btn',
+                    tag: 'button',
+                    vMode: 'btn',
+                    text: 'Подробнее',
+                    cMode: 'transparent',
+                    icon: true,
+                    iconName: 'card_arrow'
+                })

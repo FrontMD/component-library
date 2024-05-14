@@ -4,14 +4,37 @@
     line-height: 1.2em;
     color: black;
     @include max(1024) {
-        font-size: 18px;
+        font-size: 16px;
     }
     @include max(768) {
         font-size: 14px;
     }
-    iframe {
-        max-width: 100%;
+
+    h2, h3, h4 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 23px;
+        margin-top: 1.5em;
+        margin-bottom: 1.2em;
+        color:black;
+        @include max(1024) {
+            font-size: 20px;
+            line-height: 23px;
+        }
+        @include max(768) {
+            font-size: 16px;
+            line-height: 19px;
+        }
     }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 16px;
+    }
+
     p {
         margin-top: 1.2em;
         margin-bottom: 1.2em;
@@ -26,15 +49,19 @@
             font-size: 14px;
         }
     }
-    a{
+
+    a{ 
+        color: blue;
         text-decoration: none;
         @include hover {
-            color: #1964AB !important;
+            color: lightblue;
         }
     }
+
     b {
         font-weight: 700;
     }
+
     ul, ol {
         counter-reset: num;
         display: flex;
@@ -44,21 +71,17 @@
         padding-left: 0;
         margin-top: 1.2em;
         margin-bottom: 1.2em;
-        @include max(1024) {
-            gap: 15px;
-        }
     }
     
     ul li {
         position: relative;
         padding-left: 21px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
-        line-height: 1.5em;
+        line-height: 1.3em;
         color: black;
         @include max(1024) {
-            padding-left: 21px;
-            font-size: 18px;
+            font-size: 16px;
         }
         @include max(768) {
             padding-left: 16px;
@@ -94,10 +117,11 @@
             }
         }
     }
+
     ol li{
         position: relative;
         padding-left: 29px;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 500;
         line-height: 1.5em;
         color: black;
@@ -116,10 +140,11 @@
             top: 0;
             left: 0;
             font-weight: bold;
-            color: #1054A4;
+            color: blue;
         }
     }
-    img {
+
+    img, video {
         display: block;
         max-width: 100%;
         width: auto;
@@ -136,28 +161,15 @@
         }
     }
 
-    h2, h3, h4 {
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 23px;
-        margin-top: 1.5em;
-        margin-bottom: 1.2em;
-        color:black;
-        @include max(1024) {
-            font-size: 20px;
-            line-height: 23px;
-        }
-        @include max(768) {
-            font-size: 16px;
-            line-height: 19px;
-        }
+    iframe {
+        max-width: 100%;
     }
 
-    h3 {
-        font-size: 20px;
+    *:first-child {
+        margin-top: 0;
     }
 
-    h4 {
-        font-size: 18px;
+    *:last-child {
+        margin-bottom: 0;
     }
 }

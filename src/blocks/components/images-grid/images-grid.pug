@@ -1,0 +1,28 @@
+-
+    const defaultImagesGridProps = {
+        classes: '',
+        fancyGroup: 'ewa',
+        items: [
+            'img/gallery/gallery_1.jpg',
+            'img/gallery/gallery_2.jpg',
+            'img/gallery/gallery_3.jpg',
+        ]
+    }
+
+mixin images-grid(props = defaultImagesGridProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultImagesGridProps.classes,
+            fancyGroup: props.fancyGroup ? props.fancyGroup : defaultImagesGridProps.fancyGroup,
+            items: props.items ? props.items : defaultImagesGridProps.items
+        }
+
+    .images-grid(class=checkProps.classes)
+        - let count = 0 
+        - while (count < checkProps.items.length)
+            a.images-grid__image(href= checkProps.items[count] data-fancybox= checkProps.fancyGroup data-thumb= checkProps.items[count])
+                img(src=checkProps.items[count])
+                .images-grid__zoom
+                    svg 
+                        use(xlink:href=`img/sprites/sprite.svg#search`)
+            - count += 1;

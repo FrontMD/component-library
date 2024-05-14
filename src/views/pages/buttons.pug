@@ -92,3 +92,14 @@ block content
 						iconName: 'link_arrow'
 					})
 
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Кнопки для слайдеров'
+				})
+				.component-preview__flex
+					+slider-btn()
+					+slider-btn({
+						direction: 'next'
+					})

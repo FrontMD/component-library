@@ -1,0 +1,50 @@
+-
+    const defaultGalleryCardProps = {
+        classes: '',
+        fancyGroup: 'gallery',
+        title: 'Галерея',
+        images: [
+            'img/gallery/gallery_1.jpg',
+            'img/gallery/gallery_2.jpg',
+            'img/gallery/gallery_3.jpg',
+        ],
+    }
+
+mixin gallery-card(props = defaultGalleryCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultGalleryCardProps.classes,
+            title: props.title ? props.title : defaultGalleryCardProps.title,
+            images: props.images ? props.images : defaultGalleryCardProps.images,
+            fancyGroup: props.fancyGroup ? props.fancyGroup : defaultGalleryCardProps.fancyGroup,            
+        }
+
+        let quantity = '';
+        let dr = checkProps.images.length % 100;
+
+        if(dr >= 5 && dr <= 20) {
+            quantity = checkProps.images.length + ' фотографий';
+        }
+
+        dr = checkProps.images.length % 10;
+
+        if(dr === 1) {
+            quantity = checkProps.images.length + ' фотография';
+        } else if (dr >= 2 && dr <= 4) {
+            quantity = checkProps.images.length + ' фотографии';
+        }
+
+
+
+    .gallery-card(class=checkProps.classes)&attributes(attributes)
+        a.gallery-card__link(href=checkProps.images[0] data-fancybox= checkProps.fancyGroup data-thumb= checkProps.images[0])
+            .gallery-card__media
+                img(src= checkProps.images[0] alt= checkProps.title)
+            .gallery-card__quantity!= quantity
+        .gallery-card__title!= checkProps.title
+        .gallery-card__links
+            - let count = 0 
+            - while (count < checkProps.images.length)
+                -if(count > 0)
+                    a(href=checkProps.images[count] data-fancybox= checkProps.fancyGroup data-thumb= checkProps.images[count])
+                - count += 1;

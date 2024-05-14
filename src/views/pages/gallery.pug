@@ -1,0 +1,26 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Галерея"
+
+block content
+	+mixins()
+	section.gallery-page
+		.container.gallery-page__container
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Галерея'
+				})
+				.component-preview__flex
+					+images-grid()
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Галерея с одним превью'
+				})
+				.component-preview__flex
+					+gallery-card()

@@ -5,6 +5,7 @@
     min-height: 41px;
     border-radius: 8px;
     width: 100% !important;
+    min-width: 170px;
     @include max(1024) {
         min-height: 41px;
         border-radius: 8px;

@@ -1,0 +1,11 @@
+mixin up-btn(classes = '')
+    .up-btn(class=classes)
+        +btn({
+            classes: 'up-btn__btn',
+            tag: 'button',
+            vMode: 'icon',
+            text: '',
+            cMode: 'white',
+            icon: true,
+            iconName: 'up_arrow',
+        })(data-js="upBtn")
