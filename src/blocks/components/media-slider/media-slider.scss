@@ -176,16 +176,16 @@
             padding: 0;
         }
         svg {
-            width: 10px;
-            height: 16px;
+            width: 24px;
+            height: 24px;
             color: blue;
             @include max(768){
-                width: 10px;
-                height: 16px;
+                width: 24px;
+                height: 24px;
             }
             @include max(768){
-                width: 7px;
-                height: 11px;
+                width:24px;
+                height: 24px;
             }
         }
         &.swiper-button-disabled {

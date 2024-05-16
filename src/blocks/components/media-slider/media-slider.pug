@@ -30,14 +30,14 @@ mixin media-slider(props= defaultImageSliderProps)
                 .swiper-slide.media-slider__slide
 
                     - if(checkProps.slides[count].mMode == 'image')
-                        a.media-slider__media(href= checkProps.slides[count].image data-fancybox= checkProps.fancyGroup)
+                        a.media-slider__media(href= checkProps.slides[count].image data-fancybox= checkProps.fancyGroup data-thumb= checkProps.slides[count].image)
                             img(src= checkProps.slides[count].image alt='image slide')
                             .media-slider__zoom
                                 svg 
                                     use(xlink:href=`img/sprites/sprite.svg#search`)
 
                     - if(checkProps.slides[count].mMode == 'video')
-                        a.media-slider__media(href= `${checkProps.slides[count].video}.mp4` data-type="html5video" data-fancybox= checkProps.fancyGroup)
+                        a.media-slider__media(href= `${checkProps.slides[count].video}.mp4` data-type="html5video" data-fancybox= checkProps.fancyGroup data-thumb= checkProps.slides[count].image)
                             img(src= checkProps.slides[count].image alt='image slide')
                             .media-slider__zoom.media-slider__zoom--video
                                 svg 
