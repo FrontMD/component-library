@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Спойлеры"
+
+block content
+	+mixins()
+	section.sliders-page
+		.container.sliders-page__container(data-js="accordion")
