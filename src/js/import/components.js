@@ -10,6 +10,7 @@
 @@include("../../blocks/components/amount-input/amount-input.js")
 @@include("../../blocks/components/tabs-block/tabs-block.js")
 @@include("../../blocks/components/spoiler/spoiler.js")
+@@include("../../blocks/components/media-slider/media-slider.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     validation();
@@ -20,13 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     amountInput();
     tabsBlockInit();
     accordeonInit();
+    imageSlidersInit();
 })
 
 /*include("../../blocks/components/modal/modal.js")
-include("../../blocks/components/image-slider/image-slider.js")
 
 document.addEventListener('DOMContentLoaded', () => {
-    imageSlidersInit();
     
     //modals
     modal('orderService');

@@ -7,4 +7,48 @@ block variables
 block content
 	+mixins()
 	section.sliders-page
-		.container.sliders-page__container(data-js="accordion")
+		.container.sliders-page__container
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Слайдер изображений и видео'
+				})
+			+media-slider({
+				classes: 'social__slider',
+				fancyGroup: 'mediaSlider',
+				slides: [
+					{
+						image: 'https://placehold.co/600x400',
+						mMode: 'image'
+					},
+					{
+						image: 'https://placehold.co/600x400',
+						title: 'Заголовок слайда',
+						mMode: 'image'
+					},
+					{
+						image: 'https://placehold.co/600x400',
+						title: 'Заголовок слайда',
+						text: 'Также как начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации экспериментов, поражающих по своей масштабности и грандиозности!',
+						mMode: 'image'
+					},
+					{	image: 'https://placehold.co/600x400',
+						video: 'video/video.mp4',
+						mMode: 'video'
+					},
+					{
+						image: 'https://placehold.co/600x400',
+						video: 'video/video.mp4',
+						title: 'Заголовок слайда',
+						mMode: 'video'
+					},
+					{
+						image: 'https://placehold.co/600x400',
+						video: 'video/video.mp4',
+						title: 'Заголовок слайда',
+						text: 'Также как начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации экспериментов, поражающих по своей масштабности и грандиозности!',
+						mMode: 'video'
+					},
+				],
+			})
