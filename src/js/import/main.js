@@ -67,6 +67,8 @@ $(function () {
 
 });
 
+
+//Инициализация фансибокса
 document.addEventListener('DOMContentLoaded', () => {
     Fancybox.bind("[data-fancybox]", {
         placeFocusBack: false,

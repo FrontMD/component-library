@@ -1,0 +1,31 @@
+-
+    const defaultSidemenuProps = {
+        classes: '',
+        links: [
+            'Пункт меню 1', 
+            'Пункт меню 2',
+            'Пункт меню 3',
+            'Пункт меню 4',
+            'Пункт меню 5',
+            'Пункт меню 6',
+            'Пункт меню 7'
+        ],
+        activeLink: 'Пункт меню 2'
+    }
+
+mixin sidemenu(props= defaultSidemenuProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSidemenuProps.classes,
+            links: props.links ? props.links : defaultSidemenuProps.links,
+            activeLink: props.activeLink ? props.activeLink : defaultSidemenuProps.activeLink,
+        }
+
+    .sidemenu(class= checkProps.classes)&attributes(attributes)
+        ul.sidemenu__list
+            - let count = 0 
+            - while (count < checkProps.links.length)
+                li
+                    a.sidemenu__link(href='javascript:void(0)' class= `${checkProps.links[count] === checkProps.activeLink ? 'sidemenu__link--active' : ''}`)!= checkProps.links[count]
+                - count += 1; 
+

@@ -44,12 +44,19 @@
 .breadcrumbs-page,
 .buttons-page,
 .gallery-page,
-.spoilers-page {
+.spoilers-page 
+.layout-sidebar-page .layout-sidemenu__main {
     &__container {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 100px;
     }
+}
+
+.layout-sidebar-page .layout-sidemenu__main {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }
 
 .buttons-page {
@@ -61,7 +68,8 @@
 .gallery-page,
 .breadcrumbs-page,
 .spoilers-page,
-.sliders-page {
+.sliders-page,
+.layout-sidebar-page {
     &__container {
         padding-top: 100px;
         padding-bottom: 100px;

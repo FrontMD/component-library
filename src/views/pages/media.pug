@@ -1,0 +1,77 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Фото и видео"
+
+block content
+	+mixins()
+	section.gallery-page
+		.container.gallery-page__container
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Галерея'
+				})
+				.component-preview__flex
+					+images-grid()
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Галерея с одним превью'
+				})
+				.component-preview__flex
+					+gallery-card()
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Слайдер изображений и видео'
+				})
+				+media-slider({
+					classes: 'social__slider',
+					fancyGroup: 'mediaSlider',
+					slides: [
+						{
+							image: 'img/slider/slider_1.jpg',
+							mMode: 'image'
+						},
+						{
+							image: 'img/slider/slider_2.jpg',
+							title: 'Заголовок слайда',
+							mMode: 'image'
+						},
+						{
+							image: 'img/slider/slider_3.jpg',
+							title: 'Заголовок слайда',
+							text: 'Также как начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации экспериментов, поражающих по своей масштабности и грандиозности!',
+							mMode: 'image'
+						},
+						{	image: 'img/slider/slider_4.jpg',
+							video: 'video/video',
+							mMode: 'video'
+						},
+						{
+							image: 'img/slider/slider_5.jpg',
+							video: 'video/video',
+							title: 'Заголовок слайда',
+							mMode: 'video'
+						},
+						{
+							image: 'img/slider/slider_6.jpg',
+							video: 'video/video',
+							title: 'Заголовок слайда',
+							text: 'Также как начало повседневной работы по формированию позиции влечет за собой процесс внедрения и модернизации экспериментов, поражающих по своей масштабности и грандиозности!',
+							mMode: 'video'
+						},
+					],
+				})
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Видео с кастомным управлением'
+				})
+				+video()(muted="")

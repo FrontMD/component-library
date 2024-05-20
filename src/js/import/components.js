@@ -11,6 +11,7 @@
 @@include("../../blocks/components/tabs-block/tabs-block.js")
 @@include("../../blocks/components/spoiler/spoiler.js")
 @@include("../../blocks/components/media-slider/media-slider.js")
+@@include("../../blocks/components/video/video.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     validation();
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     tabsBlockInit();
     accordeonInit();
     imageSlidersInit();
+    videoControlInit();
 })
 
 /*include("../../blocks/components/modal/modal.js")

@@ -1,0 +1,27 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Сайдбар, боковое меню, модально окно, мобильное меню"
+
+block content
+	+mixins()
+	section.layout-sidebar-page
+		.container.layout-sidebar-page__container
+			+layout-sidebar({
+				isSticky: true
+			})
+				.component-preview
+					+title({
+						classes: 'component-preview__title',
+						tag: 'h4',
+						text: 'Мобильное меню'
+					})
+					+btn()
+				.component-preview
+					+title({
+						classes: 'component-preview__title',
+						tag: 'h4',
+						text: 'Модальное окно'
+					})
+					+btn()

@@ -1,0 +1,100 @@
+.sidemenu {
+    overflow: hidden;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 30px 30px 0;
+        list-style: none;
+        @include max(1024) {
+            overflow-y: hidden;
+            overflow-x: auto;
+            flex-direction: row;
+            gap: 10px;
+            padding: 0;
+            margin-bottom: -10px;
+            padding-bottom: 10px;
+        }
+        @include max(768) {
+            gap: 5px;
+            margin-bottom: -10px;
+            padding-bottom: 10px;
+        }
+    }
+    li {
+        @include max(1024) {
+            &:first-child {
+                padding-left: 20px;
+            }
+            &:last-child {
+                padding-right: 20px;
+            }
+        }
+        @include max(768) {
+            &:first-child {
+                padding-left: 20px;
+            }
+            &:last-child {
+                padding-right: 20px;
+            }
+        }
+    }
+    &__link {
+        position: relative;
+        display: block;
+        padding-left: 29px;
+        color: black;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.174em;
+        text-decoration: none;
+        cursor: pointer;
+        transition: color 0.3s linear;
+        @include hover() {
+            color: blue;
+        }
+        @include max(1024) {
+            padding: 10.5px 15px;
+            font-size: 18px;
+            white-space: nowrap;
+            border: 2px solid #E6E6EA;
+            border-radius: 10px;
+            line-height: 1;
+        }
+        @include max(768) {
+            padding: 8.5px 15px;
+            font-size: 14px;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 14px;
+            width: 2px;
+            transform: translateY(-50%);
+            border-radius: 2px;
+            background-color: transparent;
+            transition: background-color 0.3s linear;
+            @include max(1024) {
+                display: none;
+            }
+        }
+        &--active {
+            color: blue;
+            font-weight: 600;
+            pointer-events: none;
+            @include max(1024) {
+                color: white;
+                background-color: blue;
+                border-color: blue;
+            }
+            &::before {
+                background-color: blue;
+            }
+        }
+    }
+
+}

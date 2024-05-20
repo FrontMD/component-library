@@ -1,0 +1,43 @@
+-
+	const defaultLayoutSidebarProps = {
+		classes: '',
+		position: 'left',
+		sidebarContentName: 'sidemenu',
+		isSticky: false,
+	}
+
+mixin layout-sidebar(props = defaultLayoutSidebarProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultLayoutSidebarProps.classes,
+			position: props.position ? props.position : defaultLayoutSidebarProps.position,
+			sidebarContentName: props.sidebarContentName ? props.sidebarContentName : defaultLayoutSidebarProps.sidebarContentName,
+			isSticky: props.isSticky ? props.isSticky : defaultLayoutSidebarProps.isSticky,
+		}
+
+	.layout-sidebar(class= checkProps.classes)
+		.layout-sidebar__sidebar
+			- if(checkProps.isSticky === true)
+				.layout-sidebar__sticky
+					case checkProps.sidebarContentName
+						when 'sidemenu'
+							+sidemenu({
+								links: [
+									'Заголовки', 
+									'Хлебные крошки, пагинация',
+									'Кнопки',
+									'Формы и поля',
+									'Текстовый редактор + "Вверх"',
+									'Фото и видео',
+									'Вкладки',
+									'Спойлеры',
+									'Cookie',
+									'Сайдбар, боковое меню, модально окно, мобильное меню'
+
+								],
+								activeLink: 'Сайдбар, боковое меню, модально окно, мобильное меню'
+							})
+			- else
+				- sidebarContent[checkProps.sidebarContentName]
+		.layout-sidemenu__main
+			block
