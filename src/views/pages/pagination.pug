@@ -1,0 +1,27 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Пагинация"
+
+block content
+	section.pagination-page
+		.container.pagination-page__container
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Пагинация'
+				})
+				+pagination({
+					count: 11,
+				})
+
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Пагинация c точками'
+				})
+				+pagination({
+					separator: true
+				})

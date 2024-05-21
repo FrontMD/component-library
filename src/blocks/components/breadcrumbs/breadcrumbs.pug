@@ -1,10 +1,14 @@
 -
     const defaultBreadCrumbsProps = {
         classes: '',
-        colorMode: 'dark',
+        cMode: 'dark', //dark - на светлом фоне, light - на тёмном фоне
         items: [
             {
                 name: 'Главная',
+                link: 'javascript:void(0);'
+            },
+            {
+                name: 'Ещё один уровень',
                 link: 'javascript:void(0);'
             },
             {
@@ -19,12 +23,12 @@ mixin breadcrumbs(props = defaultBreadCrumbsProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultBreadCrumbsProps.classes,
-            colorMode: props.colorMode ? props.colorMode : defaultBreadCrumbsProps.colorMode,
+            cMode: props.cMode ? props.cMode : defaultBreadCrumbsProps.cMode,
             items: props.items ? props.items : defaultBreadCrumbsProps.items,
             deskBackBtn: props.deskBackBtn ? props.deskBackBtn : defaultBreadCrumbsProps.deskBackBtn,
         }
 
-        let colorModeClass = 'breadcrumbs--' + checkProps.colorMode
+        let colorModeClass = 'breadcrumbs--' + checkProps.cMode
         let deskBackBtnClass = checkProps.deskBackBtn ? 'breadcrumbs--back' : ''
         let noLinksClass = checkProps.items.length < 1 ? 'breadcrumbs--no-links' : ''
 

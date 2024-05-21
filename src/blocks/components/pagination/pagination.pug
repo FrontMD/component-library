@@ -1,7 +1,8 @@
 -
     const defaultPaginationProps = {
         classes: '',
-        count: 37
+        count: 37,
+        separator: false
     }
 
 mixin pagination(props = defaultPaginationProps)
@@ -9,12 +10,18 @@ mixin pagination(props = defaultPaginationProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultPaginationProps.classes,
             count: props.count ? props.count : defaultPaginationProps.count,
+            separator: props.separator ? props.separator : defaultPaginationProps.separator
         }
     .pagination(class= checkProps.classes)
         - let i = 1
-            while i <= checkProps.count
-                -if(i < 6 || i == checkProps.count)
+            -if(checkProps.separator === true)
+                while i <= checkProps.count
+                    -if(i < 6 || i == checkProps.count)
+                        a.pagination__page(href="javascript:void(0);" class= i===1 ? "active" : "")= i
+                    -if(i == 6)
+                        .pagination__separator ...
+                    - i++
+            - else
+                while i <= checkProps.count
                     a.pagination__page(href="javascript:void(0);" class= i===1 ? "active" : "")= i
-                -if(i == 6)
-                    .pagination__separator ...
-                - i++
+                    - i++

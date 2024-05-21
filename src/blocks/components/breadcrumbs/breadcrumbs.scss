@@ -73,57 +73,30 @@
     }
 }
 
-.breadcrumbs.breadcrumbs--back,
-.breadcrumbs.breadcrumbs--no-links {
-    .breadcrumbs__back {
-        display: flex;
-        flex-direction: row;
-        min-height: auto;
-        min-width: auto;
-        margin-top: 40px;
-        gap: 15px;
-        @include hover() {
-            .btn__text {
-                color: blue;
-            }
-            .btn__icon {
-                svg {
-                    color: blue;
-                }
-            }
-        }
-        .btn__text {
-            color: black;
-            font-size: 18px;
-            transition: color 0.3s linear;
-        }
-        .btn__icon {
-            width: 24px;
-            height: 24px;
-            svg {
-                transform: rotate(-180deg);
-            }
-        }
-        @include max(1024) {
-            margin-top: 30px;
-            gap: 15px;
-            .btn__text {
-                font-size: 18px;
-            }
-            .btn__icon {
-                width: 24px;
-                height: 24px;
-            }
-        }
-        @include max(768) {
+.breadcrumbs {
+    &--back,
+    &--no-links {
+        .breadcrumbs__back {
             display: flex;
+            flex-direction: row;
             min-height: auto;
             min-width: auto;
+            margin-top: 40px;
             gap: 15px;
-            margin-top: 5px;
+            @include hover() {
+                .btn__text {
+                    color: blue;
+                }
+                .btn__icon {
+                    svg {
+                        color: blue;
+                    }
+                }
+            }
             .btn__text {
                 color: black;
-                font-size: 16px;
+                font-size: 18px;
+                transition: color 0.3s linear;
             }
             .btn__icon {
                 width: 24px;
@@ -132,6 +105,50 @@
                     transform: rotate(-180deg);
                 }
             }
+            @include max(1024) {
+                margin-top: 30px;
+                gap: 15px;
+                .btn__text {
+                    font-size: 18px;
+                }
+                .btn__icon {
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            @include max(768) {
+                display: flex;
+                min-height: auto;
+                min-width: auto;
+                gap: 15px;
+                margin-top: 5px;
+                .btn__text {
+                    color: black;
+                    font-size: 16px;
+                }
+                .btn__icon {
+                    width: 24px;
+                    height: 24px;
+                    svg {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.breadcrumbs {
+    &--light &__list {
+        color: white;
+    }
+
+    &--light &__back {
+        .btn__text {
+            color: white;
+        }
+        .btn__icon {
+            color: white;
         }
     }
 }

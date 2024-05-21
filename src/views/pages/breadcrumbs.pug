@@ -1,41 +1,69 @@
 extends ../layouts/default
 
 block variables
-	- const title = "Хлебные крошки и пагинация"
+	- const title = "Хлебные крошки"
 
 block content
 	section.breadcrumbs-page
 		.container.breadcrumbs-page__container
 
-			.component-preview
-				+title({
-					classes: 'component-preview__title',
-					tag: 'h4',
-					text: 'Классические'
-				})
-				+breadcrumbs()
-			.component-preview
-				+title({
-					classes: 'component-preview__title',
-					tag: 'h4',
-					text: 'Только конопка "назад"'
-				})
-				+breadcrumbs({
-					items: []
-				})
-			.component-preview
-				+title({
-					classes: 'component-preview__title',
-					tag: 'h4',
-					text: 'С кнопкой назад'
-				})
-				+breadcrumbs({
-					classes: 'breadcrumbs--back'
-				})
-			.component-preview
-				+title({
-					classes: 'component-preview__title',
-					tag: 'h4',
-					text: 'Пагинация'
-				})
-				+pagination()
+			.breadcrumbs-page__flex
+				.breadcrumbs-page__left
+					.component-preview
+						+title({
+							classes: 'component-preview__title',
+							tag: 'h4',
+							text: 'Классические'
+						})
+						+breadcrumbs()
+					.component-preview
+						+title({
+							classes: 'component-preview__title',
+							tag: 'h4',
+							text: 'Только кнопка "назад"'
+						})
+						+breadcrumbs({
+							items: []
+						})
+					.component-preview
+						+title({
+							classes: 'component-preview__title',
+							tag: 'h4',
+							text: 'С кнопкой назад'
+						})
+						+breadcrumbs({
+							deskBackBtn: true
+						})
+				.breadcrumbs-page__right
+					.component-preview
+						+title({
+							classes: 'component-preview__title',
+							tag: 'h4',
+							text: 'Классические',
+							cMode: 'light',
+						})
+						+breadcrumbs({
+							cMode: 'light',
+						})
+					.component-preview
+						+title({
+							classes: 'component-preview__title',
+							tag: 'h4',
+							text: 'Только кнопка "назад"',
+							cMode: 'light',
+						})
+						+breadcrumbs({
+							items: [],
+							cMode: 'light'
+						})
+					.component-preview
+						+title({
+							classes: 'component-preview__title',
+							tag: 'h4',
+							text: 'С кнопкой назад',
+							cMode: 'light',
+						})
+						+breadcrumbs({
+							cMode: 'light',
+							deskBackBtn: true
+						})

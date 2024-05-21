@@ -1,70 +1,67 @@
 .title {
-    h1, h2, h3, h4 {
+    //базовый размер заголовка h1, остальные размеры пропорциональны.
+    font-size: 50px;
+    color: black;
+    @include max(1024) {
+        font-size: 34px;
+    }
+    @include max(768) {
+        font-size: 24px;
+    }
+
+    &--light {
+        color: white;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
         color: inherit;
         line-height: inherit;
         font-size: inherit;
         letter-spacing: inherit;
         font-weight: inherit;
         text-wrap: inherit;
-    } 
-    &--h1 {
-        font-size: 64px;
+    }
+
+    &__h1 {
+        font-size: 1em;
         font-weight: 700;
         line-height: 1.4em;
         text-transform: uppercase;
-        color: black;
-
-        @include max(1024) {
-            font-size: 44px;
-        }
-        @include max(768) {
-            font-size: 22px;
-        }
     }
 
-    &--h2 {
-        font-size: 54px;
+    &__h2 {
+        font-size: 0.8333em;
         font-weight: 700;
         line-height: 1.2em;
         text-transform: uppercase;
-        color: black;
-
-        @include max(1024) {
-            font-size: 40px;
-        }
-        @include max(768) {
-            font-size: 20px;
-        }
     } 
 
-    &--h3 {
-        font-size: 44px;
+    &__h3 {
+        font-size: 0.6875em;
         font-weight: 700;
         line-height: 1.2em;
         text-transform: uppercase;
-        color: black;
-
-        @include max(1024) {
-            font-size: 34px;
-        }
-        @include max(768) {
-            font-size: 18px;
-        }
     } 
 
-    &--h4 {
-        font-size: 34px;
+    &__h4 {
+        font-size: 0.5833em;
         font-weight: 700;
         line-height: 1.2em;
         text-transform: uppercase;
-        color: black;
+    }
 
-        @include max(1024) {
-            font-size: 24px;
-        }
-        @include max(768) {
-            font-size: 16px;
-        }
-    } 
+    &__h5 {
+        font-size: 0.4792em;
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+    }
+
+    &__h6 {
+        font-size: 0.3958em;
+        font-weight: 700;
+        line-height: 1.2em;
+        text-transform: uppercase;
+    }
 
 }
