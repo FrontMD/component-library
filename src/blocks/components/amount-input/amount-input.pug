@@ -11,6 +11,7 @@ mixin amount-input(props = defaultAmountInputProps)
 
 
     .amount-input(class=checkProps.classes data-js="amountInput")
+        span.amount-input__width
         span.amount-input__change.amount-input__minus.min
             svg 
                 use(xlink:href=`img/sprites/sprite.svg#minus`)

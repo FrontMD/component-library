@@ -40,9 +40,11 @@ function amountInput() {
     
         });
 
+
         item.querySelector('input').addEventListener('blur', function(e) {
             let targetInput = e.target;
             let currentValue = targetInput.value;
+            let spanForWidth = item.querySelector('.amount-input__width');
 
             if(currentValue.length == 0) {
                 targetInput.value = 1;
@@ -50,6 +52,11 @@ function amountInput() {
             }
 
             targetInput.value = currentValue.replace(/\D/g,'');
+
+            spanForWidth.innerHTML = targetInput.value;
+
+            targetInput.style.width = spanForWidth.offsetWidth + 'px';
+            item.style.width = spanForWidth.offsetWidth + 100 + 'px'
         })
     })
 }
