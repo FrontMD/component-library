@@ -21,24 +21,6 @@
             padding-bottom: 10px;
         }
     }
-    li {
-        @include max(1024) {
-            &:first-child {
-                padding-left: 20px;
-            }
-            &:last-child {
-                padding-right: 20px;
-            }
-        }
-        @include max(768) {
-            &:first-child {
-                padding-left: 20px;
-            }
-            &:last-child {
-                padding-right: 20px;
-            }
-        }
-    }
     &__link {
         position: relative;
         display: block;

@@ -141,22 +141,22 @@
 .btn.btn--icon {
     border: none;
     padding: 6px;
-    min-width: auto;
+    min-width: 50px;
     color: blue;
     border: 2px solid #e5e5e5;
     .btn__icon {
         svg {
-            width: 30px;
-            height: 30px;
+            width: 25px;
+            height: 25px;
             color: inherit;
 
             @include max(1024) {
-                width: 30px;
-                height: 30px;
+                width: 25px;
+                height: 25px;
             }
             @include max(768) {
-                width: 20px;
-                height: 20px;
+                width: 25px;
+                height: 25px;
             }
         }
     }

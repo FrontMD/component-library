@@ -1,0 +1,9 @@
+.site-header {
+    &__container.container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

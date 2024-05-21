@@ -26,158 +26,357 @@
     <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
+    <header class="site-header">
+      <div class="container site-header__container"><a class="btn btn--btn btn--blue " href="/"><span class="btn__text">Главное меню</span></a>
+      </div>
+    </header>
     <main class="site-main">
       <section class="spoilers-page">
         <div class="container spoilers-page__container" data-js="accordion">
-          <div class="spoiler   spoiler--rotate  " data-js="spoiler">
-            <div class="spoiler__header" data-js="spoilerHeader">
-              <div class="spoiler__title">Спойлер со стрелкой</div>
-              <div class="spoiler__arrow">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="spoiler__content" data-js="spoilerContent">
-              <div class="spoiler__wrapper">
-                <div class="text-editor">
-                  <h3>Контент спойлера</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="spoiler   spoiler--replace  " data-js="spoiler">
-            <div class="spoiler__header" data-js="spoilerHeader">
-              <div class="spoiler__title">Спойлер с подменой иконки</div>
-              <div class="spoiler__arrow">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
-                </svg>
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="spoiler__content" data-js="spoilerContent">
-              <div class="spoiler__wrapper">
-                <div class="text-editor">
-                  <h3>Контент спойлера</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="spoiler   spoiler--rotate spoiler--empty " data-js="spoiler">
-            <div class="spoiler__header" data-js="spoilerHeader">
-              <div class="spoiler__title">Пустой спойлер</div>
-            </div>
-            <div class="spoiler__content" data-js="spoilerContent">
-              <div class="spoiler__wrapper">
-              </div>
-            </div>
-          </div>
-          <div class="spoiler  spoiler--image spoiler--rotate  " data-js="spoiler">
-            <div class="spoiler__header" data-js="spoilerHeader">
-              <div class="spoiler__img"> <img src="img/gallery/gallery_1.jpg" alt="Спойлер с картинкой"/></div>
-              <div class="spoiler__title">Спойлер с картинкой</div>
-              <div class="spoiler__arrow">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="spoiler__content" data-js="spoilerContent">
-              <div class="spoiler__wrapper">
-                <div class="text-editor">
-                  <h3>Контент спойлера</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="spoiler   spoiler--replace  " data-js="spoiler">
-            <div class="spoiler__header" data-js="spoilerHeader">
-              <div class="spoiler__title">Вложенные спойлеры</div>
-              <div class="spoiler__arrow">
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
-                </svg>
-                <svg>
-                  <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
-                </svg>
-              </div>
-            </div>
-            <div class="spoiler__content" data-js="spoilerContent">
-              <div class="spoiler__wrapper">
-                <div class="inner-spoilers">
-                  <div class="spoiler inner-spoilers__content  spoiler--replace  " data-js="spoiler">
-                    <div class="spoiler__header" data-js="spoilerHeader">
-                      <div class="spoiler__title">Вложенные спойлеры</div>
-                      <div class="spoiler__arrow">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="spoiler__content" data-js="spoilerContent">
-                      <div class="spoiler__wrapper">
-                        <div class="text-editor">
-                          <h3>Контент спойлера					</h3>
-                        </div>
-                      </div>
-                    </div>
+              <div class="spoiler   spoiler--rotate  " data-js="spoiler">
+                <div class="spoiler__header" data-js="spoilerHeader">
+                  <div class="spoiler__title">Спойлер со стрелкой</div>
+                  <div class="spoiler__arrow">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                    </svg>
                   </div>
-                  <div class="spoiler inner-spoilers__content  spoiler--replace  " data-js="spoiler">
-                    <div class="spoiler__header" data-js="spoilerHeader">
-                      <div class="spoiler__title">Вложенные спойлеры</div>
-                      <div class="spoiler__arrow">
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
-                        </svg>
-                        <svg>
-                          <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <div class="spoiler__content" data-js="spoilerContent">
-                      <div class="spoiler__wrapper">
+                </div>
+                <div class="spoiler__content" data-js="spoilerContent">
+                  <div class="spoiler__wrapper">
                         <div class="text-editor">
                           <h3>Контент спойлера</h3>
                         </div>
-                      </div>
+                  </div>
+                </div>
+              </div>
+              <div class="spoiler   spoiler--replace  " data-js="spoiler">
+                <div class="spoiler__header" data-js="spoilerHeader">
+                  <div class="spoiler__title">Спойлер с подменой иконки</div>
+                  <div class="spoiler__arrow">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="spoiler__content" data-js="spoilerContent">
+                  <div class="spoiler__wrapper">
+                        <div class="text-editor">
+                          <h3>Контент спойлера</h3>
+                        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="spoiler   spoiler--rotate spoiler--empty " data-js="spoiler">
+                <div class="spoiler__header" data-js="spoilerHeader">
+                  <div class="spoiler__title">Пустой спойлер</div>
+                </div>
+                <div class="spoiler__content" data-js="spoilerContent">
+                  <div class="spoiler__wrapper">
+                  </div>
+                </div>
+              </div>
+              <div class="spoiler  spoiler--image spoiler--rotate  " data-js="spoiler">
+                <div class="spoiler__header" data-js="spoilerHeader">
+                  <div class="spoiler__img"> <img src="img/gallery/gallery_1.jpg" alt="Спойлер с картинкой"></div>
+                  <div class="spoiler__title">Спойлер с картинкой</div>
+                  <div class="spoiler__arrow">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="spoiler__content" data-js="spoilerContent">
+                  <div class="spoiler__wrapper">
+                        <div class="text-editor">
+                          <h3>Контент спойлера</h3>
+                        </div>
+                  </div>
+                </div>
+              </div>
+              <div class="spoiler   spoiler--replace  " data-js="spoiler">
+                <div class="spoiler__header" data-js="spoilerHeader">
+                  <div class="spoiler__title">Вложенные спойлеры</div>
+                  <div class="spoiler__arrow">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
+                    </svg>
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="spoiler__content" data-js="spoilerContent">
+                  <div class="spoiler__wrapper">
+                    <div class="inner-spoilers">
+                          <div class="spoiler inner-spoilers__content  spoiler--replace  " data-js="spoiler">
+                            <div class="spoiler__header" data-js="spoilerHeader">
+                              <div class="spoiler__title">Вложенные спойлеры</div>
+                              <div class="spoiler__arrow">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
+                                </svg>
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="spoiler__content" data-js="spoilerContent">
+                              <div class="spoiler__wrapper">
+                                    <div class="text-editor">
+                                      <h3>Контент спойлера					</h3>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="spoiler inner-spoilers__content  spoiler--replace  " data-js="spoiler">
+                            <div class="spoiler__header" data-js="spoilerHeader">
+                              <div class="spoiler__title">Вложенные спойлеры</div>
+                              <div class="spoiler__arrow">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#s-plus"></use>
+                                </svg>
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#s-minus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="spoiler__content" data-js="spoilerContent">
+                              <div class="spoiler__wrapper">
+                                    <div class="text-editor">
+                                      <h3>Контент спойлера</h3>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
           <div class="text-editor">
             <h2>Спойлер "Показать ещё"</h2>
             <p>Повседневная практика показывает, что внедрение современных методик предполагает независимые способы реализации модели развития. А ещё тщательные исследования конкурентов, превозмогая сложившуюся непростую экономическую ситуацию, своевременно верифицированы. Каждый из нас понимает очевидную вещь: высококачественный прототип будущего проекта, в своём классическом представлении, допускает внедрение модели развития. Как принято считать, активно развивающиеся страны третьего мира и по сей день остаются уделом либералов, которые жаждут быть объединены в целые кластеры себе подобных. Но глубокий уровень погружения выявляет срочную потребность поэтапного и последовательного развития общества. Задача организации, в особенности же высококачественный прототип будущего проекта говорит о возможностях распределения внутренних резервов и ресурсов.</p>
-            <div class="spoiler projects__more  spoiler--rotate  spoiler--show-more" data-js="spoiler">
-              <div class="spoiler__content" data-js="spoilerContent">
-                <div class="spoiler__wrapper">
-                  <div class="text-editor">
-                    <p>Следует отметить, что синтетическое тестирование обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Сложно сказать, почему интерактивные прототипы преданы социально-демократической анафеме. В рамках спецификации современных стандартов, предприниматели в сети интернет лишь добавляют фракционных разногласий и смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Наше дело не так однозначно, как может показаться: высокое качество позиционных исследований в значительной степени обусловливает важность форм воздействия. Как принято считать, действия представителей оппозиции заблокированы в рамках своих собственных рациональных ограничений. Господа, современная методология разработки играет определяющее значение для новых принципов формирования материально-технической и кадровой базы.</p>
+                <div class="spoiler projects__more  spoiler--rotate  spoiler--show-more" data-js="spoiler">
+                  <div class="spoiler__content" data-js="spoilerContent">
+                    <div class="spoiler__wrapper">
+                      <div class="text-editor">
+                        <p>Следует отметить, что синтетическое тестирование обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Сложно сказать, почему интерактивные прототипы преданы социально-демократической анафеме. В рамках спецификации современных стандартов, предприниматели в сети интернет лишь добавляют фракционных разногласий и смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Наше дело не так однозначно, как может показаться: высокое качество позиционных исследований в значительной степени обусловливает важность форм воздействия. Как принято считать, действия представителей оппозиции заблокированы в рамках своих собственных рациональных ограничений. Господа, современная методология разработки играет определяющее значение для новых принципов формирования материально-технической и кадровой базы.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="spoiler__header" data-js="spoilerHeader">
+                        <button class="btn btn--btn btn--transparent spoiler__btn" type="button"><span class="btn__icon"> 
+                            <svg> 
+                              <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                            </svg></span><span class="btn__text">Подробнее</span>
+                        </button>
                   </div>
                 </div>
-              </div>
-              <div class="spoiler__header" data-js="spoilerHeader">
-                <button class="btn btn--btn btn--transparent spoiler__btn" type="button"><span class="btn__icon"> 
-                    <svg> 
-                      <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
-                    </svg></span><span class="btn__text">Подробнее</span>
-                </button>
-              </div>
-            </div>
           </div>
         </div>
       </section>
     </main>
     <noindex>
-      <div style="display:none;">
+      <div>
         <!--код модалок сюда-->
+        <div class="mobile-menu hystmodal mobile-menu--main" id="mobileMenuMain" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header">
+                  <div class="mobile-menu__title">Меню</div>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body">
+                      <button class="btn btn--link btn--transparent mobile-menu__link" type="button" data-modal="#mobileMenuServices"><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Продукция и услуги</span>
+                      </button>
+                      <button class="btn btn--link btn--transparent mobile-menu__link" type="button" data-modal="#mobileMenuAbout"><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">О компании</span>
+                      </button><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Поставщикам и подрядчикам</span></a>
+                      <button class="btn btn--link btn--transparent mobile-menu__link" type="button" data-modal="#mobileMenuStaff"><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Персонал</span>
+                      </button><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Новости</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Контакты</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu hystmodal" id="mobileMenuServices" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header"><a class="mobile-menu__title" href="javascript:void(0)" data-modal="#mobileMenuMain">Продукция и услуги</a>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body"><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Продукция</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Услуги</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Остатки МТР</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu hystmodal" id="mobileMenuAbout" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header"><a class="mobile-menu__title" href="javascript:void(0)" data-modal="#mobileMenuMain">О компании</a>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body"><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">История компании</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Проекты и решения</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Сертификаты и лицензии</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Экология</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Мы гордимся</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Фотогалерея</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Новости</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu hystmodal" id="mobileMenuStaff" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header"><a class="mobile-menu__title" href="javascript:void(0)" data-modal="#mobileMenuMain">Персонал</a>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body"><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Вакансии</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Социальная ответственность</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Условия труда</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Карьера</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Молодежная политика</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Таланты компании</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu hystmodal" id="mobileMenuSearch" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header">
+                  <div class="mobile-menu__title">Поиск</div>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body">
+                  <div class="search mobile-menu__search">
+                    <div class="search__form">
+                          <label class="field search__field " data-js="formField">
+                            <input class="field__input" type="text" placeholder="Начните писать запрос"><span class="field__error" data-js="fieldError"></span>
+                          </label>
+                          <button class="btn btn--icon btn--transparent search__search" type="button"><span class="btn__icon"> 
+                              <svg> 
+                                <use xlink:href="img/sprites/sprite.svg#search"></use>
+                              </svg></span>
+                          </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="modal hystmodal" id="myModal" aria-hidden="true">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                        <button class="btn btn--icon btn--transparent modal__close" type="button" data-hystclose><span class="btn__icon"> 
+                            <svg> 
+                              <use xlink:href="img/sprites/sprite.svg#close"></use>
+                            </svg></span>
+                        </button>
+                        <div class="title title--h4 modal__title">
+                          <h4>Заголовок окна</h4>
+                        </div>
+                        <div class="text-editor">
+                          <p>Контент окна</p>
+                          <ul>
+                            <li>Пункт 1</li>
+                            <li>Пункт 2</li>
+                            <li>Пункт 3</li>
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
       </div>
     </noindex>
     <script src="js/main.min.js"></script>

@@ -1,11 +1,9 @@
 extends ../layouts/default
-include ../helpers/mixins
 
 block variables
 	- const title = "Текстовый редактор"
 
 block content
-	+mixins()
 	section.text-editor
 		.container.text-editor__container
 			+text-editor()

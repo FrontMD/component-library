@@ -1,11 +1,9 @@
 extends ../layouts/default
-include ../helpers/mixins
 
 block variables
 	- const title = "Фото и видео"
 
 block content
-	+mixins()
 	section.gallery-page
 		.container.gallery-page__container
 			.component-preview

@@ -1,3 +1,16 @@
 noindex
-	div(style="display:none;")
+	div
 		//код модалок сюда
+		include ../mobile-menu/mobile-menu
+		+modal()
+			+title({
+				classes: "modal__title",
+				tag: "h4",
+				text: "Заголовок окна"
+			})
+			+text-editor()
+				p Контент окна
+				ul
+					li Пункт 1
+					li Пункт 2
+					li Пункт 3

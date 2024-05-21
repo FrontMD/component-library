@@ -1,11 +1,9 @@
 extends layouts/default
-include helpers/mixins
 
 block variables
 	- const title = "Компоненты"
 
 block content
-	+mixins()
 	.page.components-page
 		section.components-list
 			.container

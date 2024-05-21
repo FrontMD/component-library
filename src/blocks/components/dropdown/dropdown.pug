@@ -1,0 +1,46 @@
+-
+    const defaultDropDownProps = {
+        classes: '',
+        name: 'Выпадающее меню',
+        link: 'javascript:void(0);',
+        links: [
+            {
+                name: 'Пункт 1',
+                link: 'javascript:void(0);',
+            },
+            {
+                name: 'Пункт 2',
+                link: 'javascript:void(0);',
+            },
+            {
+                name: 'Пункт 3',
+                link: 'javascript:void(0);',
+            },
+            {
+                name: 'Пункт 4',
+                link: 'javascript:void(0);',
+            }                                          
+        ]
+    }
+
+mixin dropdown(props = defaultDropDownProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultDropDownProps.classes,
+            name: props.name ? props.name : defaultDropDownProps.name,
+            link: props.link ? props.link : defaultDropDownProps.link,
+            links: props.links ? props.links : defaultDropDownProps.links
+        }
+
+    .dropdown(class=checkProps.classes)&attributes(attributes)
+        .dropdown__header
+            a.dropdown__link(href= checkProps.link)!= checkProps.name
+            .dropdown__arrow 
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#drop_down_arrow`)
+        ul.dropdown__list
+            - let count = 0 
+            - while (count < checkProps.links.length)
+                li
+                    a.dropdown__link(href= checkProps.links[count].link)!= checkProps.links[count].name 
+                - count += 1; 

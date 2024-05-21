@@ -26,76 +26,95 @@
     <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
+    <header class="site-header">
+      <div class="container site-header__container"><a class="btn btn--btn btn--blue " href="/"><span class="btn__text">Главное меню</span></a>
+      </div>
+    </header>
     <main class="site-main">
       <section class="form-page">
         <div class="container form-page__container">
-          <form class="form" action="#" data-validate="data-validate" novalidate="novalidate">
-            <div class="form__title">Заголовок формы</div>
-            <div class="form__text"></div>
-            <div class="form__fields">
-              <label class="field  " data-js="formField"><span class="field__title">Ф.И.О.<span>*</span></span>
-                <input class="field__input" type="text" placeholder="" required=""/><span class="field__error" data-js="fieldError"></span>
-              </label>
-              <label class="field  " data-js="formField"><span class="field__title">Телефон<span>*</span></span>
-                <input class="field__input" type="tel" placeholder="+7" data-type="phoneNumber" required="" data-v-name="phone"/><span class="field__error" data-js="fieldError"></span>
-              </label>
-              <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
-                <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"/><span class="field__error" data-js="fieldError"></span>
-              </label>
-              <label class="field  " data-js="formField"><span class="field__title">Дата рождения<span>*</span></span>
-                <input class="field__input" type="text" placeholder="-- -- ----" data-type="date" required="" data-v-name="date"/><span class="field__error" data-js="fieldError"></span>
-              </label>
-              <label class="field  " data-js="formField"><span class="field__title">Образование</span>
-                <select class="field__select" data-js="formSelect">
-                  <option></option>
-                  <option>Высшее</option>
-                  <option>Средне-специальное</option>
-                  <option>Среднее</option>
-                </select>
-              </label>
-              <label class="field  " data-js="textarea"><span class="field__title">Коментарий</span>
-                <textarea class="field__textarea" rows="3"></textarea>
-              </label>
-              <label class="field-file" data-js="formField" data-placeholder="Запрос на изготовление продукции"><span class="field-file__title">Прикрепить файл<span>*</span></span><span class="field-file__fakeinput"><span data-js="fileName">Запрос на изготовление продукции</span><span class="icon-empty">
-                    <svg>
-                      <use xlink:href="img/sprites/sprite.svg#clip"></use>
-                    </svg></span><span class="icon-full" data-js="iconFull">
-                    <svg>
-                      <use xlink:href="img/sprites/sprite.svg#close"></use>
-                    </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
-                <input class="field-file__input" type="file" required="" data-v-name="file"/>
-              </label>
-            </div>
-            <button class="btn btn--btn btn--blue form__submit" type="submit"><span class="btn__text">Отправить</span>
-            </button>
-            <div class="form__privacy">
-              <p>Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a></p>
-            </div>
-          </form>
+              <form class="form" action="#" data-validate novalidate>
+                <div class="form__title">Заголовок формы</div>
+                <div class="form__text"></div>
+                <div class="form__fields">
+                      <label class="field  " data-js="formField"><span class="field__title">Ф.И.О.<span>*</span></span>
+                        <input class="field__input" type="text" placeholder="" required=""><span class="field__error" data-js="fieldError"></span>
+                      </label>
+                      <label class="field  " data-js="formField"><span class="field__title">Телефон<span>*</span></span>
+                        <input class="field__input" type="tel" placeholder="+7" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                      </label>
+                      <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
+                        <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                      </label>
+                      <label class="field  " data-js="formField"><span class="field__title">Дата рождения<span>*</span></span>
+                        <input class="field__input" type="text" placeholder="-- -- ----" data-type="date" required="" data-v-name="date"><span class="field__error" data-js="fieldError"></span>
+                      </label>
+                      <label class="field  " data-js="formField"><span class="field__title">Образование</span>
+                        <select class="field__select" data-js="formSelect">
+                          <option></option>
+                          <option>Высшее</option>
+                          <option>Средне-специальное</option>
+                          <option>Среднее</option>
+                        </select>
+                      </label>
+                      <label class="field  " data-js="textarea"><span class="field__title">Коментарий</span>
+                        <textarea class="field__textarea" rows="3"></textarea>
+                      </label>
+                      <label class="field-file" data-js="formField" data-placeholder="Запрос на изготовление продукции"><span class="field-file__title">Прикрепить файл<span>*</span></span><span class="field-file__fakeinput"><span data-js="fileName">Запрос на изготовление продукции</span><span class="icon-empty">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                            </svg></span><span class="icon-full" data-js="iconFull">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#close"></use>
+                            </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                        <input class="field-file__input" type="file" required="" data-v-name="file">
+                      </label>
+                </div>
+                    <button class="btn btn--btn btn--blue form__submit" type="submit"><span class="btn__text">Отправить</span>
+                    </button>
+                <div class="form__privacy">
+                  <p>Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a></p>
+                </div>
+              </form>
           <div class="form-page__right">
             <div>
-              <select class="select" data-js="select" name="" preloader="За всё время">
-                <option>За всё время</option>
-                <option>2024 г.</option>
-                <option>2023 г.</option>
-                <option>2022 г.</option>
-                <option>2021 г.</option>
-                <option>2020 г.</option>
-                <option>2019 г.</option>
-                <option>2018 г.</option>
-                <option>2017 г.</option>
-                <option>2016 г.</option>
-              </select>
+                  <select class="select" data-js="select" name="" preloader="За всё время">
+                    <option>За всё время</option>
+                    <option>2024 г.</option>
+                    <option>2023 г.</option>
+                    <option>2022 г.</option>
+                    <option>2021 г.</option>
+                    <option>2020 г.</option>
+                    <option>2019 г.</option>
+                    <option>2018 г.</option>
+                    <option>2017 г.</option>
+                    <option>2016 г.</option>
+                  </select>
             </div>
-            <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
-                <svg> 
-                  <use xlink:href="img/sprites/sprite.svg#minus"></use>
-                </svg></span>
-              <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"/><span class="amount-input__change amount-input__plus"> 
-                <svg> 
-                  <use xlink:href="img/sprites/sprite.svg#plus"></use>
-                </svg></span>
-            </div>
+                <div class="amount-input" data-js="amountInput"><span class="amount-input__change amount-input__minus min">
+                    <svg> 
+                      <use xlink:href="img/sprites/sprite.svg#minus"></use>
+                    </svg></span>
+                  <input class="amount-input__value" type="number" name="amount" value="1" autocomplete="off"><span class="amount-input__change amount-input__plus"> 
+                    <svg> 
+                      <use xlink:href="img/sprites/sprite.svg#plus"></use>
+                    </svg></span>
+                </div>
+                <div class="dropdown">
+                  <div class="dropdown__header"><a class="dropdown__link" href="javascript:void(0);">Выпадающее меню</a>
+                    <div class="dropdown__arrow"> 
+                      <svg> 
+                        <use xlink:href="img/sprites/sprite.svg#drop_down_arrow"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <ul class="dropdown__list">
+                    <li><a class="dropdown__link" href="javascript:void(0);">Пункт 1</a></li>
+                    <li><a class="dropdown__link" href="javascript:void(0);">Пункт 2</a></li>
+                    <li><a class="dropdown__link" href="javascript:void(0);">Пункт 3</a></li>
+                    <li><a class="dropdown__link" href="javascript:void(0);">Пункт 4</a></li>
+                  </ul>
+                </div>
           </div>
         </div>
       </section>
@@ -106,8 +125,203 @@
       </div>
     </main>
     <noindex>
-      <div style="display:none;">
+      <div>
         <!--код модалок сюда-->
+        <div class="mobile-menu hystmodal mobile-menu--main" id="mobileMenuMain" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header">
+                  <div class="mobile-menu__title">Меню</div>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body">
+                      <button class="btn btn--link btn--transparent mobile-menu__link" type="button" data-modal="#mobileMenuServices"><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Продукция и услуги</span>
+                      </button>
+                      <button class="btn btn--link btn--transparent mobile-menu__link" type="button" data-modal="#mobileMenuAbout"><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">О компании</span>
+                      </button><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Поставщикам и подрядчикам</span></a>
+                      <button class="btn btn--link btn--transparent mobile-menu__link" type="button" data-modal="#mobileMenuStaff"><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Персонал</span>
+                      </button><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Новости</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Контакты</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu hystmodal" id="mobileMenuServices" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header"><a class="mobile-menu__title" href="javascript:void(0)" data-modal="#mobileMenuMain">Продукция и услуги</a>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body"><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Продукция</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Услуги</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Остатки МТР</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu hystmodal" id="mobileMenuAbout" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header"><a class="mobile-menu__title" href="javascript:void(0)" data-modal="#mobileMenuMain">О компании</a>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body"><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">История компании</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Проекты и решения</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Сертификаты и лицензии</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Экология</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Мы гордимся</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Фотогалерея</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Новости</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu hystmodal" id="mobileMenuStaff" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header"><a class="mobile-menu__title" href="javascript:void(0)" data-modal="#mobileMenuMain">Персонал</a>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body"><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Вакансии</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Социальная ответственность</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Условия труда</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Карьера</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Молодежная политика</span></a><a class="btn btn--link btn--transparent mobile-menu__link" href="javascript:void(0);"><span class="btn__icon">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#card_arrow"></use>
+                          </svg></span><span class="btn__text">Таланты компании</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu hystmodal" id="mobileMenuSearch" aria-hidden="true">
+          <div class="hystmodal__wrap">
+            <div class="hystmodal__window" role="dialog" aria-modal="true">
+              <div class="mobile-menu__content">
+                <div class="mobile-menu__header">
+                  <div class="mobile-menu__title">Поиск</div>
+                      <button class="btn btn--icon btn--transparent mobile-menu__close" type="button" data-hystclose><span class="btn__icon"> 
+                          <svg> 
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg></span>
+                      </button>
+                </div>
+                <div class="mobile-menu__body">
+                  <div class="search mobile-menu__search">
+                    <div class="search__form">
+                          <label class="field search__field " data-js="formField">
+                            <input class="field__input" type="text" placeholder="Начните писать запрос"><span class="field__error" data-js="fieldError"></span>
+                          </label>
+                          <button class="btn btn--icon btn--transparent search__search" type="button"><span class="btn__icon"> 
+                              <svg> 
+                                <use xlink:href="img/sprites/sprite.svg#search"></use>
+                              </svg></span>
+                          </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="modal hystmodal" id="myModal" aria-hidden="true">
+              <div class="hystmodal__wrap">
+                <div class="hystmodal__window" role="dialog" aria-modal="true">
+                  <div class="modal__content">
+                        <button class="btn btn--icon btn--transparent modal__close" type="button" data-hystclose><span class="btn__icon"> 
+                            <svg> 
+                              <use xlink:href="img/sprites/sprite.svg#close"></use>
+                            </svg></span>
+                        </button>
+                        <div class="title title--h4 modal__title">
+                          <h4>Заголовок окна</h4>
+                        </div>
+                        <div class="text-editor">
+                          <p>Контент окна</p>
+                          <ul>
+                            <li>Пункт 1</li>
+                            <li>Пункт 2</li>
+                            <li>Пункт 3</li>
+                          </ul>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </div>
       </div>
     </noindex>
     <script src="js/main.min.js"></script>

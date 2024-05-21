@@ -1,11 +1,9 @@
 extends ../layouts/default
-include ../helpers/mixins
 
 block variables
 	- const title = "Формы и поля"
 
 block content
-	+mixins()
 	section.form-page
 		.container.form-page__container
 			+form({
@@ -89,5 +87,7 @@ block content
 				div
 					+select()
 				+amount-input()
+				+dropdown()
+
 
 	include ../../blocks/components/thanks-message/thanks-message			

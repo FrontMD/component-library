@@ -41,15 +41,20 @@
 
 }
 
+.modal__title {
+    padding-right: 50px;
+    white-space: nowrap;
+}
+
 .breadcrumbs-page,
 .buttons-page,
 .gallery-page,
-.spoilers-page 
+.spoilers-page,
 .layout-sidebar-page .layout-sidemenu__main {
     &__container {
         display: flex;
         flex-direction: column;
-        gap: 100px;
+        gap: 50px;
     }
 }
 

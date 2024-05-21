@@ -25,15 +25,3 @@ document.addEventListener('DOMContentLoaded', () => {
     imageSlidersInit();
     videoControlInit();
 })
-
-/*include("../../blocks/components/modal/modal.js")
-
-document.addEventListener('DOMContentLoaded', () => {
-    
-    //modals
-    modal('orderService');
-    modal('orderProduct');
-    modal('orderVacancies');
-    modal('infoRegistration');
-    
-})*/
