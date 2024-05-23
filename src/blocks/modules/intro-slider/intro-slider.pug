@@ -1,0 +1,63 @@
+
+
+section.intro-slider(data-js="introSection")
+    .intro-slider__slider(data-js="introSlider")
+        .swiper-wrapper
+            .intro-slider__slide.swiper-slide
+                .intro-slider__media
+                    img(src='img/slider/slider_1.jpg' alt="intro")
+                .container.intro-slider__container
+                    +title({
+                        tag: 'h2',
+                        text: 'Заголовок первого слайда',
+                        classes: 'intro-slider__title'
+                    })
+                    .intro-slider__text С другой стороны, экономическая повестка сегодняшнего дня позволяет оценить значение глубокомысленных рассуждений. Учитывая ключевые сценарии поведения, синтетическое тестирование говорит о возможностях дальнейших направлений развития.
+                    .intro-slider__btns
+                        a.btn.btn--btn.btn--white.intro-slider__btn(href="javascript:void(0);")
+                            span.btn__icon
+                                img(src="img/product_btn.svg" alt='')
+                            span.btn__text Подробнее
+            .intro-slider__slide.swiper-slide
+                .intro-slider__media
+                    video(poster='img/poster.jpg' autoplay muted loop)
+                        source(src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                        source(src="video/video.webm" type='video/webm; codecs="vp8, vorbis"')
+                .container.intro-slider__container
+                    +title({
+                        tag: 'h2',
+                        text: 'Заголовок второго слайда',
+                        classes: 'intro-slider__title'
+                    })
+                    .intro-slider__text С другой стороны, экономическая повестка сегодняшнего дня позволяет оценить значение глубокомысленных рассуждений. Учитывая ключевые сценарии поведения, синтетическое тестирование говорит о возможностях дальнейших направлений развития.
+                    .intro-slider__btns
+                        a.btn.btn--btn.btn--white.intro-slider__btn(href="javascript:void(0);")
+                            span.btn__icon
+                                img(src="img/uslugi_btn.svg" alt='')
+                            span.btn__text Подробнее                      
+            .intro-slider__slide.swiper-slide
+                .intro-slider__media
+                    img(src='img/slider/slider_2.jpg' alt="intro")
+                .container.intro-slider__container
+                    +title({
+                        tag: 'h2',
+                        text: 'Заголовок третьего слайда',
+                        classes: 'intro-slider__title'
+                    })
+                    .intro-slider__text С другой стороны, экономическая повестка сегодняшнего дня позволяет оценить значение глубокомысленных рассуждений. Учитывая ключевые сценарии поведения, синтетическое тестирование говорит о возможностях дальнейших направлений развития.
+                    .intro-slider__btns
+                        a.btn.btn--btn.btn--white.intro-slider__btn(href="javascript:void(0);")
+                            span.btn__icon
+                                img(src="img/user_btn.svg" alt='')
+                            span.btn__text Подробнее
+
+        .intro-slider__controls(data-js='sliderControls')
+            +slider-btn({
+                classes: "intro-slider__control",
+                direction: 'prev'
+            })
+            +slider-btn({
+                classes: "intro-slider__control",
+                direction: 'next'
+            })
+            .intro-slider__pagination(data-js='sliderPagination')

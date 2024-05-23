@@ -1,0 +1,46 @@
+
+
+section.intro-slider-bg(data-js="introSectionBg")
+    .intro-slider-bg__slider(data-js="introSliderBg")
+        .swiper-wrapper
+            .intro-slider-bg__slide.swiper-slide
+                .intro-slider-bg__media
+                    img(src='img/slider/slider_1.jpg' alt="intro")
+            .intro-slider-bg__slide.swiper-slide
+                .intro-slider-bg__media
+                    video(poster='img/poster.jpg' autoplay muted loop)
+                        source(src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                        source(src="video/video.webm" type='video/webm; codecs="vp8, vorbis"')
+            .intro-slider-bg__slide.swiper-slide
+                .intro-slider-bg__media
+                    img(src='img/slider/slider_2.jpg' alt="intro")
+    .container.intro-slider-bg__container
+        +title({
+            tag: 'h1',
+            text: 'Единый заголовок на все слайды',
+            classes: 'intro-slider-bg__title'
+        }) 
+        .intro-slider-bg__text С другой стороны, экономическая повестка сегодняшнего дня позволяет оценить значение глубокомысленных рассуждений. Учитывая ключевые сценарии поведения, синтетическое тестирование говорит о возможностях дальнейших направлений развития.
+        .intro-slider-bg__controls(data-js='sliderControls')
+            +slider-btn({
+                classes: "intro-slider-bg__control",
+                direction: 'prev'
+            })
+            +slider-btn({
+                classes: "intro-slider-bg__control",
+                direction: 'next'
+            })
+            .intro-slider-bg__pagination(data-js='sliderPagination')
+        .intro-slider-bg__btns
+            a.btn.btn--btn.btn--white.intro-slider-bg__btn(href="javascript:void(0);")
+                span.btn__icon
+                    img(src="img/product_btn.svg" alt='')
+                span.btn__text Ссылка 1
+            a.btn.btn--btn.btn--white.intro-slider-bg__btn(href="javascript:void(0);")
+                span.btn__icon
+                    img(src="img/uslugi_btn.svg" alt='')
+                span.btn__text Ссылка 2
+            a.btn.btn--btn.btn--white.intro-slider-bg__btn(href="javascript:void(0);")
+                span.btn__icon
+                    img(src="img/user_btn.svg" alt='')
+                span.btn__text Ссылка 3

@@ -1,0 +1,29 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Карточка новостей"
+
+block content
+	section.cards-page
+		.container.cards-page__container
+			.component-preview
+				+title({
+					classes: 'component-preview__title',
+					tag: 'h4',
+					text: 'Карточка новости'
+				})
+				.component-preview__flex
+					+news-card({
+						title: 'Заголовок первой новости',
+						coverMode: 'image',
+						image: 'img/slider/slider_1.jpg',
+						video: '',
+						date: '23.05.2024'
+					})
+					+news-card({
+						title: 'Заголовок второй новости',
+						coverMode: 'video',
+						image: 'img/poster.jpg',
+						video: 'video/video',
+						date: '23.05.2024'
+					})

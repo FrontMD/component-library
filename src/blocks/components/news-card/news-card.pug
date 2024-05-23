@@ -1,0 +1,33 @@
+-
+    const defaultNewsCardProps = {
+        classes: '',
+        link: 'javascript:void(0);',
+        title: 'Ccылка',
+        coverMode: 'image',
+        image: '',
+        video: '',
+        date: ''
+    }
+
+mixin news-card(props = defaultNewsCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsCardProps.classes,
+            link: props.link ? props.link : defaultNewsCardProps.link,
+            title: props.title ? props.title : defaultNewsCardProps.title,
+            coverMode: props.coverMode ? props.coverMode : defaultNewsCardProps.coverMode,
+            image: props.image ? props.image : defaultNewsCardProps.image,
+            video: props.video ? props.video : defaultNewsCardProps.video,
+            date: props.date ? props.date : defaultNewsCardProps.date
+        }
+
+    a.news-card(href=checkProps.link class=checkProps.classes)&attributes(attributes)
+        span.news-card__image
+            img(src= checkProps.image alt= checkProps.title)
+        span.news-card__title= checkProps.title
+        span.news-card__bottom
+            if(checkProps.date)
+                span.news-card__date= checkProps.date
+            span.news-card__arrow
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#card_arrow`)

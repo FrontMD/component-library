@@ -1,0 +1,42 @@
+-
+    const defaultSocialsProps = {
+        classes: '',
+        items: [
+            {
+                link: 'https://telegram.org/',
+                icon: 'telegram'
+            },
+            {
+                link: 'https://vk.com/',
+                icon: 'vk'
+            },
+            {
+                link: 'https://www.whatsapp.com/',
+                icon: 'whatsapp'
+            },
+            {
+                link: 'https://www.youtube.com/',
+                icon: 'youtube'
+            },
+            {
+                link: 'https://www.viber.com/',
+                icon: 'viber'
+            },
+        ]
+    }
+
+mixin socials(props = defaultSocialsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSocialsProps.classes,
+            items: props.items ? props.items : defaultSocialsProps.items,
+        }
+
+    .socials(class=checkProps.classes)
+        -if(checkProps.items.length > 0)
+            each val, index in checkProps.items
+                a.socials__item(href=checkProps.items[index].link)
+                    .socials__icon
+                        svg 
+                            use(xlink:href=`img/sprites/sprite.svg#${checkProps.items[index].icon}`)
+
