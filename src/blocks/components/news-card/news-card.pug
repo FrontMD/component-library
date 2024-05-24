@@ -22,12 +22,19 @@ mixin news-card(props = defaultNewsCardProps)
         }
 
     a.news-card(href=checkProps.link class=checkProps.classes)&attributes(attributes)
-        span.news-card__image
-            img(src= checkProps.image alt= checkProps.title)
-        span.news-card__title= checkProps.title
-        span.news-card__bottom
-            if(checkProps.date)
-                span.news-card__date= checkProps.date
-            span.news-card__arrow
-                svg 
-                    use(xlink:href=`img/sprites/sprite.svg#card_arrow`)
+        span.news-card__media
+            - if(checkProps.coverMode === 'image')
+                img(src= checkProps.image alt= checkProps.title)
+            - if(checkProps.coverMode === 'video')
+                video(poster=checkProps.image autoplay muted loop)
+                    source(src=`${checkProps.video}.mp4` type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                    source(src=`${checkProps.video}.webm` type='video/webm; codecs="vp8, vorbis"')
+
+        span.news-card__content  
+            span.news-card__title= checkProps.title
+            span.news-card__bottom
+                - if(checkProps.date)
+                    span.news-card__date= checkProps.date
+                span.news-card__arrow
+                    svg 
+                        use(xlink:href=`img/sprites/sprite.svg#card_arrow`)
