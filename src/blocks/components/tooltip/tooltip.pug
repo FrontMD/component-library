@@ -1,0 +1,39 @@
+-
+    const defaultTooltipProps = {
+        classes: '',
+        link: 'javascript.void(0)',
+        name: '',
+        icon: 'info',
+        text: 'Счет будет отправлен Вам на электронную почту в течении нескольких часов.',
+        noLink: false
+    }
+
+mixin tooltip(props = defaultTooltipProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTooltipProps.classes,
+            link: props.link ? props.link : defaultTooltipProps.link,
+            name: props.name ? props.name : defaultTooltipProps.name,
+            icon: props.icon ? props.icon : defaultTooltipProps.icon,
+            text: props.text ? props.text : defaultTooltipProps.text,
+            noLink: props.noLink ? props.noLink : defaultTooltipProps.noLink,
+        }
+
+    if(checkProps.noLink === true)
+        .tooltip(class=`${checkProps.classes} ${checkProps.name.length < 1 ? 'tooltip--icon' : ''}`)&attributes(attributes)
+            span.tooltip__icon
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
+            if(checkProps.name.length > 0)
+                span.tooltip__name!= checkProps.name
+            span.tooltip__tooltip
+                span.tooltip__text!= checkProps.text
+    else
+        a.tooltip(href=checkProps.link class=`${checkProps.classes} ${checkProps.name.length < 1 ? 'tooltip--icon' : ''}`)&attributes(attributes)
+            span.tooltip__icon
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
+            if(checkProps.name.length > 0)
+                span.tooltip__name!= checkProps.name
+            span.tooltip__tooltip
+                span.tooltip__text!= checkProps.text

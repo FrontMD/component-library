@@ -1,0 +1,177 @@
+.download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 115px;
+    width: 100%;
+    padding: 0 30px;
+    background-color: lightblue;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    @include max(1024) {
+        min-width: 600px;
+        max-width: 100%;
+        min-height: 115px;
+        padding: 0 30px;
+        border-radius: 15px;
+    }
+    @include max(768) {
+        min-width: 100%;
+        min-height: 75px;
+        padding: 0 15px;
+        border-radius: 10px;
+    }
+    @include hover() {
+        .download-btn__icon {
+            background-color: #C2DFFF;
+            background-image: none;
+            svg {
+                color: blue;
+            }
+        }
+    }
+    &__column {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        flex-basis: 320px;
+        flex-shrink: 0;
+        flex-grow: 0;
+
+        @include max(1024) {
+            gap: 10px;
+            flex-basis: 620px;
+        }
+        @include max(768) {
+            gap: 10px;
+            flex-basis: 220px;
+        }
+    }
+    &__text {
+        color: black;
+        font-size: 18px;
+        line-height: 1.17em;
+        font-weight: 600;
+        text-align: left;
+
+        @include max(1024) {
+            font-size: 16px;
+        }
+        @include max(768) {
+            font-size: 14px;
+        }
+    }
+    &__info {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.14em;
+        color: #8A9AAC;
+        text-align: left;
+  
+        @include max(1024) {
+            font-size: 14px;
+        }
+        @include max(768) {
+            font-size: 10px;
+        }
+    }
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 44px;
+        height: 44px;
+        background-color: #C2DFFF;
+        background-image: $c-gradient-blue;
+        border-radius: 8px;
+        transition: background-image 0.3s linear;
+
+        @include max(1024) {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+        }
+        @include max(768) {
+            width: 44px;
+            height: 44px;
+            border-radius: 8px;
+        }
+        svg {
+            width: 24px;
+            height: 24px;
+            color: white;
+
+            @include max(1024) {
+                width: 24px;
+                height: 24px;
+                color: white;
+            }
+            @include max(768) {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+}
+
+.download-btn.download-btn--row {
+    gap: 20px;
+    @include max(1024) {
+        gap: 20px;
+    }
+    @include max(768) {
+        gap: 20px;
+    }
+    .download-btn__column {
+        display: contents;
+    }
+    .download-btn__title {
+        display: none;
+        @include max(768) {
+            color: #B0B2B7;
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.3em;
+            text-align: start;
+            margin-bottom: 2px;
+        }
+    }
+    .download-btn__text {
+        flex-basis: 237px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        @include max(1024) {
+            flex-basis: 237px;
+        }
+        @include max(768) {
+            flex-basis: 237px;
+        }
+    }
+    .download-btn__icon {
+        flex-basis: 44px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        @include max(1024) {
+            flex-basis: 44px;
+        }
+    }
+    .download-btn__date {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.3;
+        color: black;
+        @include max(1024) {
+            font-size: 16px;
+        }
+        @include max(768) {
+            font-size: 14px;
+        }
+    }
+}

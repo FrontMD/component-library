@@ -1,0 +1,38 @@
+-
+    const defaultDownloadBtnProps = {
+        classes: '',
+        vMode: '',
+        text: 'Каталог продукции и услуг',
+        info: '1.49 МБ, PDF',
+        iconName: 'download',
+        date: '',
+        isImage: false
+    }
+
+mixin download-btn(props = defaultDownloadBtnProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultDownloadBtnProps.classes,
+            vMode: props.vMode ? props.vMode : defaultDownloadBtnProps.vMode,
+            text: props.text ? props.text : defaultDownloadBtnProps.text,
+            info: props.info ? props.info : defaultDownloadBtnProps.info,
+            iconName: props.iconName ? props.iconName : defaultDownloadBtnProps.iconName,
+            date: props.date ? props.date : defaultDownloadBtnProps.date,
+            isImage: props.isImage ? props.isImage : defaultDownloadBtnProps.isImage,
+        }
+
+        let modeClass = checkProps.vMode.length > 0 ? 'download-btn--' + checkProps.vMode : '';
+        let link = checkProps.isImage ? 'img/gallery_1.jpg' : 'javascript:void(0)'
+
+    a.download-btn(href=link class=modeClass + ' ' + checkProps.classes)&attributes(attributes)
+        span.download-btn__column
+            -if(checkProps.date)
+                span.download-btn__title Название
+            span.download-btn__text!= checkProps.text
+            -if(checkProps.date)
+                span.download-btn__title Дата отчёта
+                span.download-btn__date!= checkProps.date
+            span.download-btn__info!= checkProps.info
+        span.download-btn__icon
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#${checkProps.iconName}`)

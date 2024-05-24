@@ -1,0 +1,15 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Контакты и социальные сети"
+
+block content
+    section.contacts-page
+        .container.contacts-page__container
+            .component-preview
+                +title({
+                    classes: 'component-preview__title',
+                    tag: 'h4',
+                    text: 'Социальные сети'
+                })
+                +socials()

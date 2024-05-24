@@ -1,0 +1,62 @@
+.tooltip {
+    position: relative;
+    width: fit-content;
+    padding: 11px 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    background-color: #26C8E8;
+    border-radius: 8px;
+    cursor: pointer;
+    &__name {
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 1.5em;
+        color: inherit;
+    }
+    &__icon {
+        width: 16px;
+        height: 16px;
+        svg, use {
+            color: inherit;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__tooltip {
+        position: absolute;
+        bottom: calc(100% + 4px);
+        left: -25%;
+        width: 150px;
+        padding: 8px 12px;
+        background-color: #F5F8FD;
+        border-radius: 10px;
+        color: black;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -10;
+        transition: opacity 0.3s linear;
+    }
+    &__text {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 1.2em;
+        color: inherit;  
+    }
+    
+    @include hover() {
+        .tooltip__tooltip {
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+        }
+    }
+}
+
+.tooltip {
+    &--icon {
+        padding: 8px;
+        border-radius: 100%;
+    }
+}

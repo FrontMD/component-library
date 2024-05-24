@@ -1,0 +1,16 @@
+extends ../layouts/default
+
+block variables
+    - const title = "Файлы"
+
+block content
+    section.tooltip-page
+        .container.tooltip-page__container
+            .component-preview
+                +title({
+                    classes: 'component-preview__title',
+                    tag: 'h4',
+                    text: 'Кнопки загрузки файлов'
+                })
+                .component-preview__flex
+                    +download-btn()
