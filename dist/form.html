@@ -46,8 +46,20 @@
                       <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
                         <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
                       </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Дата рождения<span>*</span></span>
-                        <input class="field__input" type="text" placeholder="-- -- ----" data-type="date" required="" data-v-name="date"><span class="field__error" data-js="fieldError"></span>
+                      <label class="field  " data-js="formField"><span class="field__title">Дата без календаря с проверкой максимальной даты<span>*</span></span>
+                        <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-v-name="date-max" data-config='{"time":false,"calendar":false,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
+                      </label>
+                      <label class="field  " data-js="formField"><span class="field__title">Дата c календарём<span>*</span></span>
+                        <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-v-name="date" data-config='{"time":false,"calendar":true,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
+                      </label>
+                      <label class="field  " data-js="formField"><span class="field__title">Дата и время<span>*</span></span>
+                        <input class="field__input" type="text" placeholder="дд.мм.гггг чч:мм" data-type="date" required="" data-v-name="datetime" data-config='{"time":true,"calendar":true,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
+                      </label>
+                      <label class="field  " data-js="formField"><span class="field__title">Несколько дат<span>*</span></span>
+                        <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-config='{"time":false,"calendar":true,"mode":"multiple"}'><span class="field__error" data-js="fieldError"></span>
+                      </label>
+                      <label class="field  " data-js="formField"><span class="field__title">Диапазон дат<span>*</span></span>
+                        <input class="field__input" type="text" placeholder="дд.мм.гггг to дд.мм.гггг" data-type="date" required="" data-config='{"time":false,"calendar":true,"mode":"range"}'><span class="field__error" data-js="fieldError"></span>
                       </label>
                       <label class="field  " data-js="formField"><span class="field__title">Образование</span>
                         <select class="field__select" data-js="formSelect">

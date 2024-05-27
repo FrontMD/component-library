@@ -5171,6 +5171,11 @@ flatnest@^1.0.0:
   resolved "https://registry.npmjs.org/flatnest/-/flatnest-1.0.0.tgz"
   integrity sha512-gZgJm7mqdtSRhfy9CDd7qlE/1z0kWhf2qtkdeHoEL31TIu+Q2K7UjifBqED6vWdNXm4A+OXDmbd0PWfWZVq/kA==
 
+flatpickr@^4.6.13:
+  version "4.6.13"
+  resolved "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.13.tgz"
+  integrity sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==
+
 flatted@^3.1.0:
   version "3.2.7"
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.7.tgz"

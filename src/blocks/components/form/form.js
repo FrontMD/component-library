@@ -54,13 +54,15 @@ function validation() {
                                 }
                                 break
                             case 'phone':
-                                if (valueField.length === 18) {
+                                valueField = valueField.replace(/\D/g, "")
+
+                                if (valueField.length === 11) {
                                     error(input).remove()
                                 } else {
                                     error(input, 'Телефон введён неверно').set()
                                 }
                                 break
-                            case 'date':
+                            case 'date-max':
                                 if (valueField.length === 10) {
                                     const valueTimestamp = Date.parse(valueField.split('.').reverse().join('-'))
                                     if (valueTimestamp < Date.now()) {
@@ -70,6 +72,20 @@ function validation() {
                                     }
                                 } else {
                                     error(input, 'Дата введена неверно').set()
+                                }
+                                break                                
+                            case 'date':
+                                if (valueField.length === 10) {
+                                    error(input).remove()
+                                } else {
+                                    error(input, 'Дата введена неверно').set()
+                                }
+                                break
+                            case 'datetime':
+                                if (valueField.length === 16) {
+                                    error(input).remove()
+                                } else {
+                                    error(input, 'Дата и время введены неверно').set()
                                 }
                                 break
                             case 'file':
@@ -129,6 +145,7 @@ function validation() {
                     let fileFields = form.querySelectorAll('.field-file[data-js="formField"]')
                     form.reset();
 
+                    //сбрасываем поле ФАЙЛ
                     if(fileFields.length > 0) {
     
                         fileFields.forEach(fileField => {
@@ -141,6 +158,7 @@ function validation() {
                         })
                     }
 
+                    //показываем сообщение благодарность
                     thanksMessageShow();
                 }
             }
@@ -159,62 +177,75 @@ function inputMasksInit(form) {
     const phones = form.querySelectorAll('input[data-type="phoneNumber"]');
     const dates = form.querySelectorAll('input[data-type="date"]');
 
-    ['input', 'focus', 'blur'].forEach(eventName=>{
-        if(phones.length > 0) {
-            phones.forEach(phone => {
-                phone.addEventListener(eventName, phoneMask);
-            })
-            dates.forEach(date => {
-                date.addEventListener(eventName, dateMask);
-            })
-        }
-    }
-    )
-
-    function phoneMask(event) {
-        let matrix = "+7 (___) ___-__-__"
-          , i = 0
-          , def = matrix.replace(/\D/g, "")
-          , val = this.value.replace(/\D/g, "");
-        if (def.length >= val.length)
-            val = def;
-        this.value = matrix.replace(/./g, function(a) {
-            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
-        });
-        if (event.type == "blur") {
-            if (this.value.length == 2)
-                this.value = ""
-        }
+    if(phones.length > 0) {
+        phones.forEach(phone => {
+            Inputmask({
+                'mask': '+7 (999) 999-99-99',
+                'showMaskOnHover': false
+            }).mask(phone); 
+        })
     }
 
-    function dateMask() {
-        let matrix = "__.__.____"
-          , i = 0
-          , def = matrix.replace(/\D/g, "")
-          , val = this.value.replace(/\D/g, "");
+    if(dates.length > 0) {
+        dates.forEach(date => {
 
-          if (def.length >= val.length) {
-              val = def;
-          }
+            let config = JSON.parse(date.dataset.config);
 
-          if(val.length == 1 && parseInt(val) > 3) {
-              val = '3'
-          }
+            let dateFormat = config.time ? "d.m.Y H:i" : "d.m.Y";
+            let dateMaskFormat = config.time ? '99.99.9999 99:99' : '99.99.9999';
+            let singleMode = config.mode === 'single' ? true : false;
+            
+            flatpickr(date, {
+                mode: config.mode,
+                noCalendar: !config.calendar,
+                allowInput: singleMode,
+                dateFormat: dateFormat,
+                enableTime: config.time,
+                time_24hr: true,
+            });
 
-          if(val.length == 2 && parseInt(val) > 31) {
-            val = '31'
-          }
+            if(singleMode) {
+                Inputmask({
+                    'mask': dateMaskFormat,
+                    'showMaskOnHover': false
+                }).mask(date);
+    
+                date.addEventListener('input', dateMask)
+            }
 
-          if(val.length == 3 && parseInt(val.substring(2)) > 1) {
-            val = val.slice(0, 2) + "1";
-          }
-          
-          if(val.length == 4 && parseInt(val.substring(2)) > 12) {
-            val = val.slice(0, 2) + "12";
-          }
+        })
+    }
 
-        this.value = matrix.replace(/./g, function(a) {
-            return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a
-        });
+    function dateMask(e) {
+
+        let val = e.target.value.replace(/\D/g, "");
+
+ 
+
+        if(val.length == 1 && parseInt(val) > 3) {
+            val = '3'
+        }
+
+        if(val.length == 2 && parseInt(val) > 31) {
+        val = '31'
+        }
+
+        if(val.length == 3 && parseInt(val.substring(2)) > 1) {
+        val = val.slice(0, 2) + "1";
+        }
+        
+        if(val.length == 4 && parseInt(val.substring(2)) > 12) {
+        val = val.slice(0, 2) + "12";
+        }
+
+        if(val.length == 10 && parseInt(val.substring(8)) > 23) {
+            val = val.slice(0, 8) + "23";
+        }
+
+        if(val.length == 12 && parseInt(val.substring(10)) > 59) {
+            val = val.slice(0, 10) + "59";
+        }
+
+        this.value = val;
     }
 }

@@ -1,38 +1,45 @@
 -
     const defaultDownloadBtnProps = {
         classes: '',
-        vMode: '',
-        text: 'Каталог продукции и услуг',
-        info: '1.49 МБ, PDF',
+        text: 'Название файла без заголовков',
+        type: 'PDF',
+        size: '1.49 МБ',
+        date: '27.05.2024',
         iconName: 'download',
-        date: '',
-        isImage: false
+        withTitles: false
     }
 
 mixin download-btn(props = defaultDownloadBtnProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultDownloadBtnProps.classes,
-            vMode: props.vMode ? props.vMode : defaultDownloadBtnProps.vMode,
             text: props.text ? props.text : defaultDownloadBtnProps.text,
-            info: props.info ? props.info : defaultDownloadBtnProps.info,
-            iconName: props.iconName ? props.iconName : defaultDownloadBtnProps.iconName,
+            type: props.type ? props.type : defaultDownloadBtnProps.type,
+            size: props.size ? props.size : defaultDownloadBtnProps.size,
             date: props.date ? props.date : defaultDownloadBtnProps.date,
-            isImage: props.isImage ? props.isImage : defaultDownloadBtnProps.isImage,
+            iconName: props.iconName ? props.iconName : defaultDownloadBtnProps.iconName,
+            withTitles: props.withTitles ? props.withTitles : defaultDownloadBtnProps.withTitles,
         }
 
-        let modeClass = checkProps.vMode.length > 0 ? 'download-btn--' + checkProps.vMode : '';
-        let link = checkProps.isImage ? 'img/gallery_1.jpg' : 'javascript:void(0)'
+        let titlesClass = checkProps.withTitles === true ? 'download-btn--titles' : '';
 
-    a.download-btn(href=link class=modeClass + ' ' + checkProps.classes)&attributes(attributes)
-        span.download-btn__column
-            -if(checkProps.date)
+    a.download-btn(href=link class=checkProps.classes + ' ' + titlesClass)&attributes(attributes)
+        -if(checkProps.text.length > 0)
+            span.download-btn__column.download-btn__column--text
                 span.download-btn__title Название
-            span.download-btn__text!= checkProps.text
-            -if(checkProps.date)
-                span.download-btn__title Дата отчёта
-                span.download-btn__date!= checkProps.date
-            span.download-btn__info!= checkProps.info
+                span.download-btn__value!= checkProps.text
+        -if(checkProps.type.length > 0)
+            span.download-btn__column.download-btn__column--type
+                span.download-btn__title Тип файла
+                span.download-btn__value!= checkProps.type
+        -if(checkProps.size.length > 0)
+            span.download-btn__column.download-btn__column--size
+                span.download-btn__title Размер
+                span.download-btn__value!= checkProps.size
+        -if(checkProps.date.length > 0)
+            span.download-btn__column.download-btn__column--date
+                span.download-btn__title Дата
+                span.download-btn__value!= checkProps.date
         span.download-btn__icon
             svg
                 use(xlink:href=`img/sprites/sprite.svg#${checkProps.iconName}`)

@@ -13,4 +13,14 @@ block content
                     text: 'Кнопки загрузки файлов'
                 })
                 .component-preview__flex
+                    +download-btn({
+                        classes: '',
+                        text: 'Название файла с заголовками',
+                        type: 'PDF',
+                        size: '1.49 МБ',
+                        date: '27.05.2024',
+                        iconName: 'download',
+                        isImage: false,
+                        withTitles: true
+                    })
                     +download-btn()
