@@ -5,12 +5,14 @@ function accordeonInit() {
 
     document.addEventListener("click", (e) => {
 
-        if(e.target.closest('[data-js="spoilerHeader"]') && !(e.target.closest('[data-modal]'))) {
+        if(e.target.closest('[data-js="spoilerHeader"]') && true /* тут можно указать какой-то внутренний контент с отдельным кликом */) {
 
             e.preventDefault()
             e.stopPropagation()
             let targetSpoiler = e.target.closest('[data-js="spoiler"]');
+
             if(targetSpoiler.classList.contains('spoiler--empty')) return;
+
             if(targetSpoiler.classList.contains('spoiler--expanded')) {
                 spoilerCollapse(targetSpoiler)
             } else {
@@ -25,7 +27,7 @@ function accordeonInit() {
 
             e.preventDefault()
             e.stopPropagation()
-            if (e.target.closest('.spoiler__btn')) {
+            if (false /* тут можно указать какой-то внутренний контент с отдельным ховером */) {
                 e.target.closest('[data-js="spoilerHeader"]').classList.add("no-hover")
             } else {
                 e.target.closest('[data-js="spoilerHeader"]').classList.remove("no-hover")
@@ -38,9 +40,10 @@ function accordeonInit() {
 function spoilerExpand(spoiler) {
 
     let targetContent = spoiler.querySelector('[data-js="spoilerContent"]');
+    let targetWrapper = spoiler.querySelector('.spoiler__wrapper');
     let innerSpoilers = spoiler.querySelectorAll('[data-js="spoiler"]');
     let summHeight = 0;
-    let parentSpoiler = spoiler.closest('[data-js="tabsBlockSlides"]')
+    let parentSlider = spoiler.closest('[data-js="tabsBlockSlides"]') //проверяем лежит ли спойлер в слайдере или вкладках
 
     if(innerSpoilers.length > 0) {
         innerSpoilers.forEach(innerSpoiler => {
@@ -49,9 +52,18 @@ function spoilerExpand(spoiler) {
         });
     }
     spoiler.classList.add("spoiler--expanded");
-    targetContent.style.maxHeight = targetContent.scrollHeight + summHeight + 'px';
-    if(parentSpoiler) {
-        parentSpoiler.swiper.updateAutoHeight(10)
+
+    let targetMaxHeight = targetContent.scrollHeight + summHeight;
+    
+    console.log(targetMaxHeight)
+
+    spoiler.style.transitionDuration = targetMaxHeight < 400 ? targetMaxHeight * 5 + "ms" : targetMaxHeight < 700 ? targetMaxHeight * 2 + "ms" : targetMaxHeight + "ms";
+    targetContent.style.transitionDuration = targetMaxHeight < 400 ? targetMaxHeight * 5 + "ms" : targetMaxHeight < 700 ? targetMaxHeight * 2 + "ms" : targetMaxHeight + "ms";
+    targetWrapper.style.transitionDuration = targetMaxHeight < 400 ? targetMaxHeight * 5 + "ms" : targetMaxHeight < 700 ? targetMaxHeight * 2 + "ms" : targetMaxHeight + "ms"; 
+    targetContent.style.maxHeight = targetMaxHeight + 'px';
+
+    if(parentSlider) {
+        parentSlider.swiper.updateAutoHeight(10)
     }
     document.activeElement.blur();
 
@@ -59,14 +71,11 @@ function spoilerExpand(spoiler) {
 
 function spoilerCollapse(spoiler) {
     let spoilerContent = spoiler.querySelector('[data-js="spoilerContent"]');
-    let parentSpoiler = spoiler.closest('[data-js="tabsBlockSlides"]');
+    let parentSlider = spoiler.closest('[data-js="tabsBlockSlides"]');
     spoiler.classList.remove('spoiler--expanded');
     spoilerContent.style.maxHeight = 0;
-    if(parentSpoiler) {
-        parentSpoiler.swiper.updateAutoHeight(10)
+    if(parentSlider) {
+        parentSlider.swiper.updateAutoHeight(10)
     }
     document.activeElement.blur();
-    if (spoiler.closest('[data-js="spoilerContent"]')) {
-        spoiler.closest('[data-js="spoilerContent"]').scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
-    }
 }

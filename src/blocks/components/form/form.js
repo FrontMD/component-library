@@ -158,8 +158,12 @@ function validation() {
                         })
                     }
 
-                    //показываем сообщение благодарность
-                    thanksMessageShow();
+                    //порверяем какой тип благодарности в форме и показываем его
+                    if(form.querySelector("[data-js='form-thanks']") !== null) {
+                        form.classList.add("form--sent")
+                    } else {
+                        thanksMessageShow();
+                    }
                 }
             }
 

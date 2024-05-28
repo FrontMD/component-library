@@ -17,7 +17,7 @@ mixin form(props = defaultFormProps)
             innerThanks: props.innerThanks ? props.innerThanks : defaultFormProps.innerThanks,
         }
 
-    form.form.form--sent(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
+    form.form(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
         .form__content(data-js='form-content')
             .form__title!= checkProps.title 
             - if(checkProps.text.length > 0)
@@ -39,5 +39,5 @@ mixin form(props = defaultFormProps)
                 .form__image-success
                     svg
                         use(xlink:href=`img/sprites/sprite.svg#success`)
-                .form__title Спасибо за заявку!
-                .form__text Наш менеджер свяжется с Вами в ближайшее время.
+                .form__title Спасибо за обращение!
+                .form__text Мы свяжемся с вами с ближайшее время.
