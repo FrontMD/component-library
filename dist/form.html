@@ -33,61 +33,96 @@
     <main class="site-main">
       <section class="form-page">
         <div class="container form-page__container">
-              <form class="form" action="#" data-validate novalidate>
-                <div class="form__title">Заголовок формы</div>
-                <div class="form__text"></div>
-                <div class="form__fields">
-                      <label class="field  " data-js="formField"><span class="field__title">Ф.И.О.<span>*</span></span>
-                        <input class="field__input" type="text" placeholder="" required=""><span class="field__error" data-js="fieldError"></span>
-                      </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Телефон<span>*</span></span>
-                        <input class="field__input" type="tel" placeholder="Номер телефона" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
-                      </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
-                        <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
-                      </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Дата без календаря с проверкой максимальной даты<span>*</span></span>
-                        <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-v-name="date-max" data-config='{"time":false,"calendar":false,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
-                      </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Дата c календарём<span>*</span></span>
-                        <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-v-name="date" data-config='{"time":false,"calendar":true,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
-                      </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Дата и время<span>*</span></span>
-                        <input class="field__input" type="text" placeholder="дд.мм.гггг чч:мм" data-type="date" required="" data-v-name="datetime" data-config='{"time":true,"calendar":true,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
-                      </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Несколько дат<span>*</span></span>
-                        <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-config='{"time":false,"calendar":true,"mode":"multiple"}'><span class="field__error" data-js="fieldError"></span>
-                      </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Диапазон дат<span>*</span></span>
-                        <input class="field__input" type="text" placeholder="дд.мм.гггг to дд.мм.гггг" data-type="date" required="" data-config='{"time":false,"calendar":true,"mode":"range"}'><span class="field__error" data-js="fieldError"></span>
-                      </label>
-                      <label class="field  " data-js="formField"><span class="field__title">Образование</span>
-                        <select class="field__select" data-js="formSelect">
-                          <option></option>
-                          <option>Высшее</option>
-                          <option>Средне-специальное</option>
-                          <option>Среднее</option>
-                        </select>
-                      </label>
-                      <label class="field  " data-js="textarea"><span class="field__title">Коментарий</span>
-                        <textarea class="field__textarea" rows="3"></textarea>
-                      </label>
-                      <label class="field-file" data-js="formField" data-placeholder="Запрос на изготовление продукции"><span class="field-file__title">Прикрепить файл<span>*</span></span><span class="field-file__fakeinput"><span data-js="fileName">Запрос на изготовление продукции</span><span class="icon-empty">
-                            <svg>
-                              <use xlink:href="img/sprites/sprite.svg#clip"></use>
-                            </svg></span><span class="icon-full" data-js="iconFull">
-                            <svg>
-                              <use xlink:href="img/sprites/sprite.svg#close"></use>
-                            </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
-                        <input class="field-file__input" type="file" data-size="10485760" accept=".docx, .pdf" required="" data-v-name="file">
-                      </label>
-                </div>
-                    <button class="btn btn--btn btn--blue form__submit" type="submit"><span class="btn__text">Отправить</span>
-                    </button>
-                <div class="form__privacy">
-                  <p>Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a></p>
+              <form class="form form--sent" action="#" data-validate novalidate>
+                <div class="form__content" data-js="form-content">
+                  <div class="form__title">Форма</div>
+                  <div class="form__text">Форма со всеми возможными полями</div>
+                  <div class="form__fields">
+                        <label class="field  " data-js="formField"><span class="field__title">Ф.И.О.<span>*</span></span>
+                          <input class="field__input" type="text" placeholder="" required=""><span class="field__error" data-js="fieldError"></span>
+                        </label>
+                        <label class="field  " data-js="formField"><span class="field__title">Телефон<span>*</span></span>
+                          <input class="field__input" type="tel" placeholder="Номер телефона" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                        </label>
+                        <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
+                          <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                        </label>
+                        <label class="field  " data-js="formField"><span class="field__title">Дата без календаря с проверкой максимальной даты<span>*</span></span>
+                          <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-v-name="date-max" data-config='{"time":false,"calendar":false,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
+                        </label>
+                        <label class="field  " data-js="formField"><span class="field__title">Дата c календарём<span>*</span></span>
+                          <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-v-name="date" data-config='{"time":false,"calendar":true,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
+                        </label>
+                        <label class="field  " data-js="formField"><span class="field__title">Дата и время<span>*</span></span>
+                          <input class="field__input" type="text" placeholder="дд.мм.гггг чч:мм" data-type="date" required="" data-v-name="datetime" data-config='{"time":true,"calendar":true,"mode":"single"}'><span class="field__error" data-js="fieldError"></span>
+                        </label>
+                        <label class="field  " data-js="formField"><span class="field__title">Несколько дат<span>*</span></span>
+                          <input class="field__input" type="text" placeholder="дд.мм.гггг" data-type="date" required="" data-config='{"time":false,"calendar":true,"mode":"multiple"}'><span class="field__error" data-js="fieldError"></span>
+                        </label>
+                        <label class="field  " data-js="formField"><span class="field__title">Диапазон дат<span>*</span></span>
+                          <input class="field__input" type="text" placeholder="дд.мм.гггг to дд.мм.гггг" data-type="date" required="" data-config='{"time":false,"calendar":true,"mode":"range"}'><span class="field__error" data-js="fieldError"></span>
+                        </label>
+                        <label class="field  " data-js="formField"><span class="field__title">Образование</span>
+                          <select class="field__select" data-js="formSelect">
+                            <option></option>
+                            <option>Высшее</option>
+                            <option>Средне-специальное</option>
+                            <option>Среднее</option>
+                          </select>
+                        </label>
+                        <label class="field  " data-js="textarea"><span class="field__title">Коментарий</span>
+                          <textarea class="field__textarea" rows="3"></textarea>
+                        </label>
+                        <label class="field-file" data-js="formField" data-placeholder="Запрос на изготовление продукции"><span class="field-file__title">Прикрепить файл<span>*</span></span><span class="field-file__fakeinput"><span data-js="fileName">Запрос на изготовление продукции</span><span class="icon-empty">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#clip"></use>
+                              </svg></span><span class="icon-full" data-js="iconFull">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#close"></use>
+                              </svg></span></span><span class="field-file__note">Не более 10 Мб</span><span class="field-file__error" data-js="fieldError"></span>
+                          <input class="field-file__input" type="file" required="" data-v-name="file" data-size="10485760" accept="image/*, text/plain, .docx, .pdf">
+                        </label>
+                  </div>
+                      <button class="btn btn--btn btn--blue form__submit" type="submit"><span class="btn__text">Отправить</span>
+                      </button>
+                  <div class="form__privacy">
+                    <p>Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a></p>
+                  </div>
                 </div>
               </form>
+          <div class="form-page__center">
+                <form class="form form--sent" action="#" data-validate novalidate>
+                  <div class="form__content" data-js="form-content">
+                    <div class="form__title">Свяжитесь с нами</div>
+                    <div class="form__text">Отправьте заявку и мы с Вами свяжемся</div>
+                    <div class="form__fields">
+                          <label class="field  " data-js="formField"><span class="field__title">Ф.И.О.<span>*</span></span>
+                            <input class="field__input" type="text" placeholder="" required=""><span class="field__error" data-js="fieldError"></span>
+                          </label>
+                          <label class="field  " data-js="formField"><span class="field__title">Телефон<span>*</span></span>
+                            <input class="field__input" type="tel" placeholder="Номер телефона" data-type="phoneNumber" required="" data-v-name="phone"><span class="field__error" data-js="fieldError"></span>
+                          </label>
+                          <label class="field  " data-js="formField"><span class="field__title">Email<span>*</span></span>
+                            <input class="field__input" type="email" placeholder="Email" required="" data-v-name="email"><span class="field__error" data-js="fieldError"></span>
+                          </label>
+                    </div>
+                        <button class="btn btn--btn btn--blue form__submit" type="submit"><span class="btn__text">Отправить</span>
+                        </button>
+                    <div class="form__privacy">
+                      <p>Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a></p>
+                    </div>
+                  </div>
+                  <div class="form__thanks" data-js="form-thanks">
+                    <div class="form__image-success">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#success"></use>
+                      </svg>
+                    </div>
+                    <div class="form__title">Спасибо за заявку!</div>
+                    <div class="form__text">Наш менеджер свяжется с Вами в ближайшее время.</div>
+                  </div>
+                </form>
+          </div>
           <div class="form-page__right">
             <div>
                   <select class="select" data-js="select" name="" preloader="За всё время">

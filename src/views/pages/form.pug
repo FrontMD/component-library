@@ -8,7 +8,8 @@ block content
         .container.form-page__container
             +form({
                 classes: '',
-                title: 'Заголовок формы',
+                title: 'Форма',
+                text: 'Форма со всеми возможными полями',
                 btnText: 'Отправить'
             })
                 +field({
@@ -158,11 +159,57 @@ block content
                     inputAttr: {
                         'required': '',
                         'data-v-name': 'file',
+                        'data-size': '10485760',
+                        'accept': 'image/*, text/plain, .docx, .pdf'
                     },
                     resetBtn: false,
                     isRequired: true
                 })
 
+            .form-page__center
+                +form({
+                    classes: '',
+                    title: 'Свяжитесь с нами',
+                    text: 'Отправьте заявку и мы с Вами свяжемся',
+                    btnText: 'Отправить',
+                    innerThanks: true
+                })
+                    +field({
+                        classes: '',
+                        type: 'text',
+                        title: 'Ф.И.О.',
+                        placeholder: '',
+                        inputAttr: {
+                            'required': ''
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'tel',
+                        title: 'Телефон',
+                        placeholder: 'Номер телефона',
+                        inputAttr: {
+                            'data-type': 'phoneNumber',
+                            'required': '',
+                            'data-v-name': 'phone'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
+                    +field({
+                        classes: '',
+                        type: 'email',
+                        title: 'Email',
+                        placeholder: 'Email',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'email'
+                        },
+                        resetBtn: false,
+                        isRequired: true
+                    })
             .form-page__right
                 div
                     +select()

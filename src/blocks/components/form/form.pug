@@ -3,7 +3,8 @@
         classes: '',
         title: '',
         text: '',
-        btnText: ''
+        btnText: '',
+        innerThanks: false
     }
 
 mixin form(props = defaultFormProps)
@@ -13,20 +14,30 @@ mixin form(props = defaultFormProps)
             title: props.title ? props.title : defaultFormProps.title,
             text: props.text ? props.text : defaultFormProps.text,
             btnText: props.btnText ? props.btnText : defaultFormProps.btnText,
+            innerThanks: props.innerThanks ? props.innerThanks : defaultFormProps.innerThanks,
         }
 
-    form.form(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
-        .form__title!= checkProps.title 
-        .form__text!= checkProps.text
-        .form__fields
-            block
-        +btn({
-            classes: 'form__submit',
-            tag: 'button',
-            buttonType: 'submit',
-            vMode: 'btn',
-            text: checkProps.btnText,
-            cMode: 'blue',
-        })
-        .form__privacy
-            p!= 'Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a>'
+    form.form.form--sent(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
+        .form__content(data-js='form-content')
+            .form__title!= checkProps.title 
+            - if(checkProps.text.length > 0)
+                .form__text!= checkProps.text
+            .form__fields
+                block
+            +btn({
+                classes: 'form__submit',
+                tag: 'button',
+                buttonType: 'submit',
+                vMode: 'btn',
+                text: checkProps.btnText,
+                cMode: 'blue',
+            })
+            .form__privacy
+                p!= 'Я согласен с условиями <a href="#" target="_blank">Политики обработки персональных данных</a>'
+        - if(checkProps.innerThanks === true)
+            .form__thanks(data-js='form-thanks')
+                .form__image-success
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#success`)
+                .form__title Спасибо за заявку!
+                .form__text Наш менеджер свяжется с Вами в ближайшее время.
