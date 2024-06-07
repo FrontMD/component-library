@@ -89,8 +89,8 @@ a {
 	color: inherit;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
 	list-style: none;
 }
 
@@ -377,7 +377,7 @@ table {
             svg {
                 width: 24px;
                 height: 24px;
-                color: blue;
+                color: $c-blue;
                 box-shadow: none;
                 filter: none;
                 @include max(1024) {
@@ -448,7 +448,7 @@ html {
             font-size: 20px; 
         }
         @include hover() {
-            color: blue;
+            color: $c-blue;
         }
     }
 }

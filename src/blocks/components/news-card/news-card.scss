@@ -111,7 +111,7 @@
         @include max(1024) {
             width: vwt(35);
             height: vwt(35);
-            background-color: blue;
+            background-color: $c-blue;
             color: white;
         }
         @include max(768) {
@@ -129,7 +129,7 @@
     @include hover(){
         .news-card__arrow {
             color: white;
-            background-color: blue;
+            background-color: $c-blue;
         }    
         .news-card__media {
             img, video {

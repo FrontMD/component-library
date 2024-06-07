@@ -59,7 +59,7 @@
     }
 
     a{ 
-        color: blue;
+        color: $c-blue;
         text-decoration: none;
         @include hover {
             color: lightblue;
@@ -101,7 +101,7 @@
             top: 50%;
             transform: translateY(-50%);
             left: 0;
-            background-color: blue;
+            background-color: $c-blue;
             width: 6px;
             height: 6px;
             border-radius: 100%;
@@ -148,7 +148,7 @@
             top: 0;
             left: 0;
             font-weight: bold;
-            color: blue;
+            color: $c-blue;
         }
     }
 

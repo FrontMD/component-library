@@ -26,7 +26,7 @@
         transition: all 0.3s linear;
 
         @include hover(){
-            color:blue;
+            color:$c-blue;
         }
     }
     &__arrow {

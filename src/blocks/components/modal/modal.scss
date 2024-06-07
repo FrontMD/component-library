@@ -67,7 +67,7 @@
 		z-index: 9999;
 		overflow: auto;
         scrollbar-width: thin;
-        scrollbar-color: blue rgba(0, 0, 0, 0);
+        scrollbar-color: $c-blue rgba(0, 0, 0, 0);
         &::-webkit-scrollbar {
             height: 2px;
             width: 2px;

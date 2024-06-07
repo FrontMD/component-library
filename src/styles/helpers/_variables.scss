@@ -15,6 +15,10 @@ $media-list: (
     'lg': 1200,
 );
 
+/* transitions */
+$tr-time-and-type: 0.3s ease;
+
 /*Цвета*/
+$c-blue: #004E9E;
 $c-gradient-blue: linear-gradient(180deg, #0C6BCC 0%, #004E9E 100%);
 $c-gradient-blue-reverse: linear-gradient(0deg, #0C6BCC 0%, #004E9E 100%);

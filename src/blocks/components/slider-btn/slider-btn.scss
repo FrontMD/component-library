@@ -7,7 +7,7 @@
     background-color: transparent;
     outline: none;
     border-radius: 15px;
-    border: 2px solid blue;
+    border: 2px solid $c-blue;
     border-width: 2px;
     cursor: pointer;
     transition: background-color 0.3s linear;
@@ -24,7 +24,7 @@
         padding: 0;
     }
     svg {
-        color: blue;
+        color: $c-blue;
         width: 10px;
         height: 16px;
         transition: all 0.3s linear;
@@ -48,7 +48,7 @@
         pointer-events: none;
     }
     @include hover(){
-        background-color: blue;
+        background-color: $c-blue;
         border-width: 0;
         svg {
             color: white;

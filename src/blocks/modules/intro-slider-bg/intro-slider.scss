@@ -131,12 +131,12 @@
         flex-shrink: 0;
         flex-grow: 0;
         @include max(768) {
-            border-color: blue;
+            border-color: $c-blue;
         }
         svg {
             color: white;
             @include max(768) {
-                color: blue;
+                color: $c-blue;
             }
         }
     }

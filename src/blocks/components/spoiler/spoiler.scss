@@ -43,7 +43,7 @@
             .spoiler__arrow {
                 background-image: none;
                 svg {
-                    color: blue;
+                    color: $c-blue;
                 }
             } 
         }
@@ -89,7 +89,7 @@
         svg {
             width: 24px;
             height: 24px;
-            color: blue;
+            color: $c-blue;
             transition: all 0.2s linear;
 
             @include max(1024) {

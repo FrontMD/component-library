@@ -34,12 +34,12 @@
                 gap: 10px;
             }
             &.swiper-slide-thumb-active {
-                border-color: blue;
+                border-color: $c-blue;
                 .tabs__name {
-                    color: blue;
+                    color: $c-blue;
                 }
                 .tabs__counter {
-                    background-color: blue;
+                    background-color: $c-blue;
                 }
             }
 

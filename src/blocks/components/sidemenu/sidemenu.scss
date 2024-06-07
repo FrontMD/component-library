@@ -33,7 +33,7 @@
         cursor: pointer;
         transition: color 0.3s linear;
         @include hover() {
-            color: blue;
+            color: $c-blue;
         }
         @include max(1024) {
             padding: 10.5px 15px;
@@ -65,16 +65,16 @@
             }
         }
         &--active {
-            color: blue;
+            color: $c-blue;
             font-weight: 600;
             pointer-events: none;
             @include max(1024) {
                 color: white;
-                background-color: blue;
-                border-color: blue;
+                background-color: $c-blue;
+                border-color: $c-blue;
             }
             &::before {
-                background-color: blue;
+                background-color: $c-blue;
             }
         }
     }

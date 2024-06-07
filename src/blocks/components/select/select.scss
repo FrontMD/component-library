@@ -167,10 +167,10 @@
                 }
                 @include hover() {  
                     transition: all 0.3s;      
-                    color: blue;
+                    color: $c-blue;
                 }
                 &.select2-results__option--highlighted {
-                    color: blue;
+                    color: $c-blue;
                     transition: all 0.3s;
                 }
             }

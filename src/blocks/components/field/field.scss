@@ -34,7 +34,7 @@
             font-size: 20px;
             font-weight: 700;
             line-height: 0;
-            color: blue;
+            color: $c-blue;
             @include max(1024) {
                 font-size: 20px;
                 right: -8px;

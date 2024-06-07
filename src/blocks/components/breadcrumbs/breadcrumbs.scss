@@ -39,7 +39,7 @@
         }
         @include hover() {
             a {
-                color: blue;
+                color: $c-blue;
             }
         }
     }
@@ -85,11 +85,11 @@
             gap: 15px;
             @include hover() {
                 .btn__text {
-                    color: blue;
+                    color: $c-blue;
                 }
                 .btn__icon {
                     svg {
-                        color: blue;
+                        color: $c-blue;
                     }
                 }
             }

@@ -28,7 +28,7 @@
     svg {
         width: 20px;
         height: 20px;
-        color: blue;
+        color: $c-blue;
         @include max(1024) {
             width: 20px;
             height: 20px;

@@ -80,30 +80,30 @@
 }
 
 .btn.btn--transparent {
-    border: 2px solid blue;
-    color: blue;
+    border: 2px solid $c-blue;
+    color: $c-blue;
     background-color: transparent;
     transition: all 0.3s linear;
     @include hover(){
         color: white;
-        background-color: blue; 
-        border-color: blue;
+        background-color: $c-blue; 
+        border-color: $c-blue;
     }
 }
 
 .btn.btn--white {
     background-color: white;
-    color: blue;
+    color: $c-blue;
     border: none;
     transition: all 0.3s linear;
     @include hover(){
-        background-color: blue;
+        background-color: $c-blue;
         color: white;
     }
 }
 
 .btn.btn--blue {
-    background-color: blue;
+    background-color: $c-blue;
     background-image: $c-gradient-blue;
     color: white;
     border: none;
@@ -123,7 +123,7 @@
         background-color:transparent;
         .btn__text,
         .btn__icon {
-            color: blue; 
+            color: $c-blue; 
         }
     }
 }
@@ -131,7 +131,7 @@
     border: none;
     padding: 6px;
     min-width: 50px;
-    color: blue;
+    color: $c-blue;
     border: 2px solid #e5e5e5;
     .btn__icon {
         svg {

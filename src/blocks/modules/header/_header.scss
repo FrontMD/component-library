@@ -4,11 +4,201 @@
     left: 0;
     width: 100%;
     z-index: 100;
-    &__container.container {
+    background-color: #fff;
+    border-bottom: 1px solid lightgrey;
+    &__container {
+        height: 70px;
+        width: 100%;
         display: flex;
-        align-items: center;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+    &__left {
+        display: flex;
+        align-items: stretch;
+    }
+    &__right {
+        display: flex;
         justify-content: flex-end;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        align-items: stretch;
+    }
+    &__socials {
+        height: 100%;
+        padding: 0 20px;
+        .socials__item {
+            width: 30px;
+            height: 30px;
+        }
+        .socials__icon {
+            width: 15px;
+            height: 15px;
+        }
+    }
+    &__left &__sector {
+        border-right: 1px solid lightgrey;
+    }
+    &__right &__sector {
+        border-left: 1px solid lightgrey;
+    }
+    &__logo {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $c-blue;
+        padding: 10px 20px;
+        img {
+            max-height: 100%;
+        }
+    }
+    &__burger {
+        height: 100%;
+        padding: 10px 20px;
+    }
+    &__location {
+        height: 100%;
+        padding: 10px 20px;
+    }
+    &__nav {
+        height: 100%;
+        .nav-menu__list {
+            gap: 0;
+        }
+        .nav-menu__btn {
+            padding: 0 20px;
+        }
+    }
+}
+
+.burger-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: color $tr-time-and-type;
+    svg {
+        width: 45px;
+        height: 9px;
+    }
+    &:hover {
+        color: $c-blue;
+    }
+}
+
+.location-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: black;
+    svg {
+        position: relative;
+        top: -2px;
+        width: 12px;
+        height: 16px;
+        color: $c-blue;
+    }
+    &:hover {
+        color: $c-blue;
+    }
+}
+
+.nav-menu {
+    &__list {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 20px;
+    }
+    &__item {
+        position: relative;
+    }
+    &__item--full-bg &__btn {
+        color: $c-blue;
+        &:hover {
+            background-color: $c-blue;
+            color: white;
+        }
+    }
+    &__btn {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        color: black;
+        transition: color $tr-time-and-type,
+                    background-color $tr-time-and-type;
+        &:hover {
+            color: $c-blue;
+        }
+        svg {
+            color: $c-blue;
+            width: 5px;
+            height: 5px;
+            transform: rotate(0);
+            transition: transform $tr-time-and-type;
+        }
+    }
+    &__item:hover &__btn svg {
+        transform: rotate(180deg);
+    }
+    &__btn--icon {
+        position: relative;
+        svg {
+            color: inherit;
+            width: 20px;
+            height: 20px;
+            transition: color $tr-time-and-type;
+        }
+        span {
+            position: absolute;
+            right: calc(50% - 15px);
+            top: calc(50% - 15px);
+            width: 15px;
+            height: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            line-height: 1;
+            padding: 2px;
+            border-radius: 100%;
+            background-color: $c-blue;
+            color: white;
+        }
+    }
+    &__item:hover &__btn--icon svg {
+        transform: rotate(0);
+        color: $c-blue;
+    }
+    &__inner-list {
+        min-width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        background-color: $c-blue;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity $tr-time-and-type;
+    }
+    &__item:hover &__inner-list {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__inner-btn {
+        display: block;
+        padding: 10px 20px;
+        color: white;
+        background-color: rgb(255, 255, 255, 0);
+        transition: background-color $tr-time-and-type;
+        white-space: nowrap;
+        &:hover {
+            background-color: rgb(255, 255, 255, 0.2);
+        }
     }
 }

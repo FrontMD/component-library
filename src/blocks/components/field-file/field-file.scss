@@ -50,7 +50,7 @@
             font-size: 20px;
             font-weight: 700;
             line-height: 0;
-            color: blue;
+            color: $c-blue;
             @include max(1024) {
                 font-size: 20px;
                 right: -8px;
@@ -104,7 +104,7 @@
             svg {
                 width: 24px;
                 height: 24px;
-                color: blue;
+                color: $c-blue;
                 @include max(1024) {
                     width: 24px;
                     height: 24px;
@@ -138,7 +138,7 @@
                     width: 24px;
                     height: 24px;
                 }
-                color: blue;
+                color: $c-blue;
             }
         }
     }

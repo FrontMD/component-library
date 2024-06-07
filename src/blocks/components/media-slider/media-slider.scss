@@ -44,7 +44,7 @@
         svg {
             width: 16px;
             height: 16px;
-            color: blue;
+            color: $c-blue;
         }
         &--video {
             opacity: 1;
@@ -178,7 +178,7 @@
         svg {
             width: 24px;
             height: 24px;
-            color: blue;
+            color: $c-blue;
             @include max(768){
                 width: 24px;
                 height: 24px;
@@ -192,7 +192,7 @@
             opacity: 0;
         }
         @include hover() {
-            background-color: blue;
+            background-color: $c-blue;
             transition: background-color 0.3s linear;
             svg {
                 transition: color 0.3s linear;
